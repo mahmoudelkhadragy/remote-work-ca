@@ -1,0 +1,22 @@
+body.v3 .product_cat-astrology-plus.product .entry-summary .cart,
+body.v3.single-product form.cart {
+  background: linear-gradient(
+    180deg,
+    rgba(168, 146, 210, 1) 0%,
+    rgba(104, 97, 186, 1) 100%
+  );
+}
+body.v3
+  .product_cat-astrology-plus.product
+  .entry-summary
+  .cart
+  .wcpa_form_outer,
+body.v3.single-product form.cart .wcpa_form_outer {
+  margin: 0 auto 10px;
+}
+.storefront-full-width-content.single-product div.product .summary {
+  overflow: hidden;
+}
+form.variations_form {
+  position: relative;
+}
