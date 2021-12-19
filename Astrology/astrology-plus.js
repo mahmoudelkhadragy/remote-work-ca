@@ -35,10 +35,56 @@ form.variations_form {
   background-color:#554cad;
   color: #fff; 
 }
+.product_cat-astrology-plus.product .entry-summary .variations .value{
+  width: 100%;
+  margin-bottom: 5px;
+}
+.step_2{
+  display: none;
+}
+.validation_message{
+  color: #fff;
+  font-size: 13px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  display: none;
+}
+input#email{
+  margin-bottom: 5px;
+}
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 `;
 $("head").append(`<style>${styles}</style>`);
 (function () {
   // make variables for every element in the form
+  var astrology_h1 = $("h1.product_title");
   var astrology_text = $(".woocommerce-product-details__short-description");
   var form_container = $("form.variations_form");
   var main_h2 = $("form.variations_form h2");
@@ -51,6 +97,8 @@ $("head").append(`<style>${styles}</style>`);
   var location_of_birth = $("#wcpa-placeselector-1572984785878");
   var email = $("#wcpa-text-1572984832828");
   var submit_button = $(".single_add_to_cart_button");
+  var email_input = $("#email");
+  var pilling_input = $("#billing-period");
 
   function initialState() {
     main_h2.text("Enter Your Contact Information");
@@ -63,14 +111,91 @@ $("head").append(`<style>${styles}</style>`);
     location_of_birth.hide();
     submit_button.hide();
 
-    form_container.append('<button class="next_form_btn step_1">Next</button>');
+    // add step_1 button to email
+    form_container.append(
+      '<button type="button" class="next_form_btn step_1">Next</button>'
+    );
+    // add step_2 button to pilling
+    form_container.append(
+      '<button type="button" class="next_form_btn step_2">Add to Cart</button>'
+    );
+    // add validation message to email
+    email.append(
+      '<div class="validation_message email_validation">please enter email</div>'
+    );
+
+    // add pilling validation message
+    pilling_period.append(
+      '<div class="validation_message billing_validation">please enter billing period</div>'
+    );
   }
 
+  function isEmail(email) {
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+  }
+
+  // first step
   function firstStep() {
-    pilling_period.show();
+    // hide title
+    astrology_h1.hide();
+    // hide the astrology text
+    astrology_text.slideUp(200, function () {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      setTimeout(() => {
+        animateSlideForm();
+      }, 600);
+      main_h2.text("Choose Your Plan");
+      email.hide();
+      pilling_period.show();
+      $("button.step_1").hide();
+      $(".step_2").show();
+    });
   }
 
-  // steps of making form
+  // animate the form
+  function animateSlideForm() {
+    form_container.animate({ left: "-1000px", top: "0px" }, 500, function () {
+      $(this).animate({ top: "1000px", left: "-1000px" }, 1, function () {
+        $(this).animate({ left: "1000px", top: "1000px" }, 0, function () {
+          $(this).animate({ left: "1000px", top: "0px" }, 1, function () {
+            $(this).animate({ left: "0px", top: "0px" }, 500);
+          });
+        });
+      });
+    });
+  }
+
+  // show validation message
+  function showValidationMessage(element) {
+    if (element.css("display") == "none") {
+      element.show();
+    } else {
+      element.addClass("shake");
+      setTimeout(() => {
+        element.removeClass("shake");
+      }, 300);
+    }
+  }
+
+  // initial step steps of making form
   initialState();
-  firstStep();
+
+  // firstStep();
+  $(".step_1").on("click", function () {
+    var email_validation = $(".email_validation");
+    if (isEmail(email_input.val())) {
+      firstStep();
+    } else {
+      showValidationMessage(email_validation);
+    }
+  });
+
+  // secondStep
+  $(".step_2").on("click", function () {
+    var billing_validation = $(".billing_validation");
+    console.log(pilling_input.val());
+    console.log("dddd");
+  });
+  console.log($(".step_2"));
 })();
