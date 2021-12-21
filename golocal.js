@@ -48,3 +48,23 @@
   // apply changes after document is ready
   document.addEventListener("DOMContentLoaded", goLocalChanges());
 })();
+
+// var arr = [
+//   { id: 1, name: "mahmoud" },
+//   { id: 2, name: "ff" },
+//   { id: 3, name: "ali" },
+//   { id: 4, name: "sdadsasd" },
+// ];
+// arr2 = [1, 3];
+
+// var filtered = arr.filter((item) => {
+//   for (el of arr2) {
+//     if (el === item.id) {
+//       return item;
+//     }
+//   }
+// });
+
+// filtered2 = arr.filter((item) => arr2.includes(item.id));
+
+// console.log(filtered2);
