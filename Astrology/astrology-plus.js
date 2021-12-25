@@ -91,6 +91,50 @@ form.variations_form table.variations,
   font-size: 20px;
   margin: 30px auto;
 }
+body.v3 .text_transfer_message{
+  text-transform: capitalize;
+  font-weight: 400;
+  font-family: khand,sans-serif;
+  display: none;
+  text-align: center;
+  font-size: 20px;
+}
+.lds-ring {
+  display: none;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 40px auto 30px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes shake {
   10%,
   90% {
@@ -121,7 +165,7 @@ $("head").append(`<style>${styles}</style>`);
     var astrology_h1 = $("h1.product_title");
     var astrology_text = $(".woocommerce-product-details__short-description");
     var form_container = $("form.variations_form");
-    var main_h2 = $("form.variations_form h2");
+    var main_h2 = $("form.variations_form > h2");
     var email_h2 = $("#wcpa-header-1574120465608 h2");
     var pilling_period = $("form.variations_form table.variations");
     var gender = $("#wcpa-select-1572984697918");
@@ -184,6 +228,9 @@ $("head").append(`<style>${styles}</style>`);
       // add birthday validation message
       first_name.append(
         '<div class="validation_message name_validation">please enter all fields</div>'
+      );
+      main_h2.after(
+        `<div class="lds-ring"><div></div><div></div><div></div><div></div></div><p class="text_transfer_message">just a few seconds before you will be transferred</p>`
       );
     }
 
@@ -313,6 +360,11 @@ $("head").append(`<style>${styles}</style>`);
       var name_validation = $(".name_validation");
       if (first_name_input.val() && gender_input.val()) {
         submit_button.click();
+        $(".lds-ring").show();
+        $(".text_transfer_message").fadeIn(400);
+        main_h2.hide();
+        first_name.hide();
+        gender.hide();
       } else {
         showValidationMessage(name_validation);
       }
