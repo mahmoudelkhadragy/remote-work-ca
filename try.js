@@ -1,6 +1,11 @@
-const person = [];
-person.name = "Mahmoud";
+// const person = [];
+// person.name = "Mahmoud";
+// console.log(typeof person === "array"); // false
+// console.log(typeof person === "object"); // true
+// --------
 
-console.log(typeof person === "array"); // false
+//
+var obj = { a: true, b: false };
+const { a, b } = obj;
 
-console.log(typeof person === "object"); // true
+console.log(a, b);
