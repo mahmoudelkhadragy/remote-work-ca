@@ -7,7 +7,7 @@ body {
   margin: 30px auto 0;
 }
 .slider_container {
-  width: 50%;
+  width: 100%;
   margin: auto;
   position: relative;
 }
@@ -37,10 +37,12 @@ body {
 }
 .carousel_kh img {
   width: 100%;
+  cursor: pointer;
 }
 .carousel_thumbnails {
   width: 100%;
   display: flex;
+  align-items: center;
   gap: 10px;
   margin-top: 10px;
 }
