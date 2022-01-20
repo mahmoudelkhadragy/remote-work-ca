@@ -1,0 +1,122 @@
+#product-96410 .related.products {
+  display: none;
+}
+.optimize_row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.optimize_product_info {
+  padding: 40px 0;
+  border-bottom: 1px solid #ccc;
+}
+.optimize_product_info .optimize_head {
+  text-align: center;
+}
+.optimize_product_info .optimize_product_item {
+  text-align: center;
+  padding: 10px;
+}
+.item_image img {
+  max-width: 200px;
+  margin: auto;
+}
+.optimize_product_item .item_info p {
+  font-weight: 400;
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+}
+.optimize_product_item .item_info h4 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-family: "Khand", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 0.82px;
+  line-height: 1.5;
+}
+
+.optimize_testimonial {
+  width: 90%;
+  margin: auto;
+  padding: 45px 0;
+}
+.optimize_testimonial .test_image img {
+  max-width: 270px;
+}
+.optimize_cust_testmonial q {
+  display: block;
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  line-height: 1.8;
+}
+.optimize_cust_testmonial q::before,
+.optimize_cust_testmonial q::after {
+  display: inline-block;
+  font-weight: bold;
+  transform: scale(2);
+  line-height: 27px;
+}
+.optimize_cust_testmonial {
+  padding-right: 130px;
+}
+.optimize_test_social {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 18px;
+}
+.optimize_test_social a {
+  font-size: 1.4rem !important;
+  transform: translateY(4px);
+  margin-right: 5px;
+}
+.optimize_test_social span:first-of-type {
+  font-family: "Merriweather", serif;
+  display: inline-block;
+  margin-right: 15px;
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .optimize_cust_testmonial {
+    padding-right: 30px;
+  }
+  .optimize_test_social {
+    margin-top: 15px;
+  }
+  .optimize_cust_testmonial q {
+    font-size: 18px;
+  }
+  .optimize_cust_testmonial q::before,
+  .optimize_cust_testmonial q::after {
+    transform: scale(1.6);
+  }
+}
+@media (max-width: 767px) {
+  .optimize_row {
+    flex-direction: column;
+  }
+  .optimize_testimonial {
+    width: 98%;
+  }
+  .optimize_cust_testmonial {
+    padding-right: 0px;
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  .optimize_testimonial .test_image {
+    order: 1;
+  }
+  .optimize_cust_testmonial {
+    order: 2;
+  }
+  .optimize_test_social {
+    margin-top: 10px;
+  }
+  .optimize_cust_testmonial q {
+    font-size: 16px;
+  }
+  .optimize_cust_testmonial q::before,
+  .optimize_cust_testmonial q::after {
+    transform: scale(1.6);
+  }
+}
