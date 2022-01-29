@@ -1,0 +1,23 @@
+.optimize_products .products_row {
+  display: flex;
+  gap: 20px;
+}
+.opt_img_product img {
+  max-width: 180px;
+}
+.opt_info_product p {
+  font-size: 15px;
+  text-transform: initial;
+}
+.opt_info_product p.title {
+  margin: 8px 0;
+}
+.opt_info_product p.price {
+  margin: 0;
+}
+
+@media (max-width: 830px) {
+  .opt_img_product img {
+    max-width: 120px;
+  }
+}
