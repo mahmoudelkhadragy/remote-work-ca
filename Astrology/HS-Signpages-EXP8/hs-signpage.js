@@ -1,4 +1,6 @@
 $("head").append(`
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 <style>
 .grid__rail .other-signs{
     display: none;
@@ -71,6 +73,19 @@ $("head").append(`
     }
 }
 </style>
+`);
+$("body").append(`
+<script
+    type="text/javascript"
+    src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script
+    type="text/javascript"
+    src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+    type="text/javascript"
+    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
 `);
 $(`.latest-article-card`).after(`
 <div class="aplus-promo d_card_t_none_m_card hide-medium my-3">
@@ -225,10 +240,8 @@ $(".daily-work").after(`
 `);
 
 setTimeout(() => {
-  var flkty = new Flickity(".opt_coursel_mobile", {
-    cellAlign: "left",
-    contain: true,
-    pageDots: false,
-    adaptiveHeight: true,
+  $(".opt_coursel_mobile").slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
   });
 }, 1200);
