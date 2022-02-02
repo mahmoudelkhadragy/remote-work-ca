@@ -1,6 +1,6 @@
 $("head").append(`
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 <style>
 .grid__rail .other-signs{
     display: none;
@@ -12,6 +12,9 @@ $("head").append(`
 
 .more-horoscopes-carousel{
     display: none;
+}
+.optimize_products{
+  margin-bottom: 60px;
 }
 .optimize_products .products_row {
     display: flex;
@@ -45,10 +48,22 @@ $("head").append(`
 .opt_product:hover .opt_info_product p{
     text-decoration: underline;
 }
+.slick-arrow{
+  z-index: 99999 !important;
+}
+.slick-prev {
+   left: -8px !important;
+}
+.slick-next {
+   right: -8px !important;
+}
 @media (max-width: 830px){
     .opt_img_product img {
         max-width: 120px;
       }
+    .aplus-promo{
+        display: none;
+     }
 }
 @media (max-width: 576px){
     .opt_coursel_mobile{
@@ -59,18 +74,16 @@ $("head").append(`
     }
     .opt_coursel_mobile .opt_img_product img {
         max-width: 135px;
+        margin: auto;
+        display: block;
     }
     .opt_coursel_mobile .opt_info_product p{
-        padding: 0 12px;
+        padding: 0 10px;
         font-size: 14px;
     }
-    .flickity-prev-next-button{
-        width: 30px !important;
-        height: 30px !important;
-    }
-    .flickity-viewport{
-        height: 230px;
-    }
+   .opt_product:hover img{
+    transform: scale(1);
+  }
 }
 </style>
 `);
@@ -99,13 +112,15 @@ $(`.latest-article-card`).after(`
 </div>
 </div>
 `);
-$(".daily-work").after(`
+var opt_carousel = $(".carousel-container")[0];
+
+$(opt_carousel).parent().after(`
 <section class="optimize_products">
       <h2>More Personalized Products</h2>
       <div class="products_row opt_desktop">
         <a
           class="opt_product"
-          href="https://shop.astrology.com/product/yearly-horoscope/?utm_source=store&utm_medium=site&utm_campaign=astro-store"
+          href="https://shop.astrology.com/product/yearly-horoscope/?utm_source=store&amp;utm_medium=site&amp;utm_campaign=astro-store"
           target="_blank"
         >
           <div class="opt_img_product">
@@ -122,7 +137,7 @@ $(".daily-work").after(`
 
         <a
           class="opt_product"
-          href="https://shop.astrology.com/product/birth-horoscope-natal-chart/?utm_source=store&utm_medium=site&utm_campaign=astro-store"
+          href="https://shop.astrology.com/product/birth-horoscope-natal-chart/?utm_source=store&amp;utm_medium=site&amp;utm_campaign=astro-store"
           target="_blank"
         >
           <div class="opt_img_product">
@@ -138,7 +153,7 @@ $(".daily-work").after(`
         </a>
         <a
           class="opt_product"
-          href="https://shop.astrology.com/product/natal-moon-report/?utm_source=store&utm_medium=site&utm_campaign=astro-store"
+          href="https://shop.astrology.com/product/natal-moon-report/?utm_source=store&amp;utm_medium=site&amp;utm_campaign=astro-store"
           target="_blank"
         >
           <div class="opt_img_product">
@@ -154,7 +169,7 @@ $(".daily-work").after(`
         </a>
         <a
           class="opt_product"
-          href="https://shop.astrology.com/product/january-2022-horoscope/?utm_source=store&utm_medium=site&utm_campaign=astro-store"
+          href="https://shop.astrology.com/product/january-2022-horoscope/?utm_source=store&amp;utm_medium=site&amp;utm_campaign=astro-store"
           target="_blank"
         >
           <div class="opt_img_product">
@@ -172,7 +187,7 @@ $(".daily-work").after(`
       <div class="opt_coursel_mobile">
         <a
           class="opt_product"
-          href="https://shop.astrology.com/product/yearly-horoscope/?utm_source=store&utm_medium=site&utm_campaign=astro-store"
+          href="https://shop.astrology.com/product/yearly-horoscope/?utm_source=store&amp;utm_medium=site&amp;utm_campaign=astro-store"
           target="_blank"
         >
           <div class="opt_img_product">
@@ -189,7 +204,7 @@ $(".daily-work").after(`
 
         <a
           class="opt_product"
-          href="https://shop.astrology.com/product/birth-horoscope-natal-chart/?utm_source=store&utm_medium=site&utm_campaign=astro-store"
+          href="https://shop.astrology.com/product/birth-horoscope-natal-chart/?utm_source=store&amp;utm_medium=site&amp;utm_campaign=astro-store"
           target="_blank"
         >
           <div class="opt_img_product">
@@ -205,7 +220,7 @@ $(".daily-work").after(`
         </a>
         <a
           class="opt_product"
-          href="https://shop.astrology.com/product/natal-moon-report/?utm_source=store&utm_medium=site&utm_campaign=astro-store"
+          href="https://shop.astrology.com/product/natal-moon-report/?utm_source=store&amp;utm_medium=site&amp;utm_campaign=astro-store"
           target="_blank"
         >
           <div class="opt_img_product">
@@ -221,7 +236,7 @@ $(".daily-work").after(`
         </a>
         <a
           class="opt_product"
-          href="https://shop.astrology.com/product/january-2022-horoscope/?utm_source=store&utm_medium=site&utm_campaign=astro-store"
+          href="https://shop.astrology.com/product/january-2022-horoscope/?utm_source=store&amp;utm_medium=site&amp;utm_campaign=astro-store"
           target="_blank"
         >
           <div class="opt_img_product">
@@ -244,4 +259,4 @@ setTimeout(() => {
     slidesToShow: 2,
     slidesToScroll: 1,
   });
-}, 1200);
+}, 3000);
