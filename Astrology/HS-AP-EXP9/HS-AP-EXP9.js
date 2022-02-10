@@ -278,3 +278,14 @@ setTimeout(() => {
     );
   });
 }, 2000);
+
+$(window).resize(function () {
+  makeMobileChanges();
+});
+function makeMobileChanges() {
+  if ($(window).width() < 580) {
+    $('.woocommerce-product-gallery').before($('.product_title.entry-title'));
+    $('.woocommerce-product-gallery').before($('.woocommerce-product-details__short-description'));
+  }
+}
+makeMobileChanges();
