@@ -1,0 +1,101 @@
+@import url("http://fonts.cdnfonts.com/css/proxima-nova-2");
+/* font-family: 'Proxima Nova', sans-serif; */
+.conv_container {
+  max-width: 1050px;
+  margin: auto;
+}
+/* general styles */
+.conv_w_100 {
+  width: 100%;
+}
+
+/* exp styles */
+.conv_outdoor {
+  padding: 20px 0;
+}
+.conv_row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.conv_col1 {
+  width: 60%;
+}
+.conv_col2 {
+  width: 40%;
+}
+.conv_order_1 {
+  order: 1;
+}
+.conv_order_2 {
+  order: 2;
+}
+.conv_first {
+  background: rgba(237, 237, 237, 0.42);
+}
+.conv_second {
+  background: #e8f7fc;
+}
+.conv_third {
+  background: rgba(68, 199, 243, 0.27);
+}
+
+.conv_outdoor .outdoor_info {
+  padding: 10px 30px;
+}
+.conv_outdoor .outdoor_info h2 {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 20px 0;
+}
+.conv_outdoor .outdoor_info h2 span {
+  color: #44c7f3;
+}
+.conv_outdoor .outdoor_info p {
+  color: #343b41;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+@media (max-width: 575.98px) {
+  .conv_col1 {
+    width: 100%;
+  }
+  .conv_col2 {
+    width: 100%;
+  }
+  .conv_row {
+    flex-direction: column;
+  }
+  .conv_outdoor .outdoor_info {
+    padding: 10px 15px;
+  }
+  .conv_order_1 {
+    order: 2;
+  }
+  .conv_order_2 {
+    order: 1;
+  }
+  .conv_outdoor .outdoor_info h2 {
+    font-size: 28px;
+  }
+  .conv_outdoor .outdoor_info p {
+    font-size: 15px;
+    line-height: 21px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .conv_outdoor .outdoor_info h2 {
+    font-size: 24px;
+  }
+  .conv_outdoor .outdoor_info p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .conv_outdoor .outdoor_info {
+    padding: 10px 15px;
+  }
+}
