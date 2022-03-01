@@ -1,0 +1,39 @@
+#content
+  > div
+  > section.elementor-section.elementor-top-section.elementor-element.elementor-element-65d9224.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default
+  > div.elementor-container.elementor-column-gap-default
+  > div
+  > div
+  > div.elementor-element.elementor-element-30122d3.elementor-widget.elementor-widget-heading
+  h2 {
+  font-weight: 700;
+}
+
+.conv_list_ul {
+  color: #fff;
+  display: inline-block;
+  list-style: none;
+  text-align: left;
+  font-weight: 400;
+}
+.conv_list_ul li {
+  display: flex;
+  gap: 8px;
+  padding: 5px 0;
+}
+.conv_icon {
+  color: #44c7f3;
+  font-size: 14px;
+  padding-top: 2px;
+}
+.conv_para {
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  font-size: 17px;
+}
+@media (max-width: 570px) {
+  .conv_list_ul {
+    margin: 0;
+  }
+}
