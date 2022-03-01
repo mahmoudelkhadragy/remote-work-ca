@@ -5,6 +5,9 @@ if (pageURL.includes("rtaoutdoorliving.com/product-category")) {
 if (pageURL.includes("rtaoutdoorliving.com/download-catalog/download-catalog-submit/?")) {
   addNewGuidCatalogLing();
 }
+if (pageURL.includes("rtaoutdoorliving.com/download-catalog/")) {
+  changeTitle();
+}
 
 function addGuideSection() {
   var selectedEle = convert.$('#content > div > section.elementor-section.elementor-top-section.elementor-element.elementor-element-65d9224.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default > div.elementor-container.elementor-column-gap-default > div > div > div.elementor-element.elementor-element-30122d3.elementor-widget.elementor-widget-heading');
@@ -49,7 +52,16 @@ function addGuideSection() {
 }
 
 function addNewGuidCatalogLing() {
-  convert.$('#content > div > div > section.elementor-section.elementor-top-section.elementor-element.elementor-element-0683764.elementor-section-content-middle.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default > div > div.elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-d5badcc > div > div.elementor-element.elementor-element-fcad4b9.elementor-align-justify.elementor-widget.elementor-widget-button > div > div > a').attr('href', 'https://drive.google.com/file/d/1yNRPJDhDegPv1kFhmB3jBbwpJ0lkuKMm/view')
+  var guidLink = convert.$('#content > div > div > section.elementor-section.elementor-top-section.elementor-element.elementor-element-0683764.elementor-section-content-middle.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default > div > div.elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-d5badcc > div > div.elementor-element.elementor-element-fcad4b9.elementor-align-justify.elementor-widget.elementor-widget-button > div > div > a');
+
+  guidLink.attr('href', 'https://drive.google.com/file/d/1yNRPJDhDegPv1kFhmB3jBbwpJ0lkuKMm/view');
+  guidLink.find('.elementor-button-text').text('Download Guide');
+
+  convert.$('#content > div > div > section.elementor-section.elementor-top-section.elementor-element.elementor-element-0683764.elementor-section-content-middle.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default > div > div.elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-d5badcc > div > div.elementor-element.elementor-element-3c2cf23.elementor-align-justify.elementor-widget.elementor-widget-button > div > div > a').hide();
+}
+
+function changeTitle() {
+  convert.$('#content > div > div > section.elementor-section.elementor-top-section.elementor-element.elementor-element-58b9cbd.elementor-section-height-min-height.elementor-section-content-middle.elementor-section-boxed.elementor-section-height-default.elementor-section-items-middle > div.elementor-container.elementor-column-gap-default > div.elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-8549ca4 > div > div.elementor-element.elementor-element-974e549.elementor-widget.elementor-widget-heading > div > h2 > a').text('Download Your Guide');
 }
 
 convert.$('head').append(`

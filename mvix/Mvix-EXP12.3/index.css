@@ -1,0 +1,207 @@
+.block-intro-with-form:not(#NO_ID) {
+  margin-bottom: 300px;
+  position: relative;
+  background-image: none !important;
+}
+
+.block-intro-with-form:not(#NO_ID)::before,
+.block-intro-with-form:not(#NO_ID)::after {
+  content: "";
+  display: block;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-position: right top;
+  background-size: cover;
+  z-index: -2;
+  position: absolute;
+  background-image: url("https://res.cloudinary.com/dv0yi7tc1/image/upload/v1642023705/mvix-header-gradient-2-mobile_ff2ptr.jpg") !important;
+}
+.block-intro-with-form:not(#NO_ID)::after {
+  z-index: -1;
+  background-image: url("https://res.cloudinary.com/dv0yi7tc1/image/upload/v1642023705/mvix-header-gradient-2_vgni18.jpg") !important;
+}
+.header-contact-btn {
+  transform: translateY(-4px);
+}
+h1.section-title-md {
+  font-size: 54px;
+  line-height: 1.2;
+}
+.block-intro-with-form:not(#NO_ID) .editor {
+  margin-bottom: 36px;
+}
+
+.block-intro-with-form:not(#NO_ID) .check-list {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin-bottom: 54px;
+}
+
+.block-intro-with-form:not(#NO_ID) .check-list li {
+  font-weight: 400;
+}
+@media (min-width: 991px) {
+  .block-intro-with-form:not(#NO_ID) .check-list li:last-of-type {
+    margin-top: -24px;
+  }
+}
+.header-cta {
+  background: linear-gradient(
+      161.3deg,
+      rgb(1, 24, 117) 12.53%,
+      rgb(96, 114, 254) 71.79%,
+      rgb(216, 170, 233) 100%
+    ),
+    rgb(1, 24, 117);
+  border-radius: 16px;
+  display: inline-block;
+  padding: 32px;
+  max-width: 560px;
+}
+
+.header-cta__title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.4;
+  color: rgb(255, 255, 255);
+  margin: 0px 0px 16px 0px;
+}
+
+.header-cta__text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.4;
+  color: rgb(255, 255, 255);
+  display: block;
+  margin: 0px 0px 24px 0px;
+}
+
+.header-cta__btn {
+  font-weight: bold;
+  font-size: 16px;
+  width: 192px;
+  height: 56px;
+  line-height: 56px;
+  padding: 0px;
+}
+
+.block-intro-with-form:not(#NO_ID) .clients-video-popup {
+  position: absolute;
+  background: rgb(249, 249, 249);
+  padding: 16px 32px;
+  top: 100%;
+  width: 100vw;
+  left: 0px;
+}
+@media (min-width: 576px) {
+  .block-intro-with-form:not(#NO_ID) .clients-video-popup {
+    width: 100vw;
+    left: calc(270px - 50vw);
+    padding-left: calc(50vw - 250px);
+  }
+}
+@media (min-width: 768px) {
+  .block-intro-with-form:not(#NO_ID) .clients-video-popup {
+    left: calc(360px - 50vw);
+    padding-left: calc(50vw - 360px);
+  }
+}
+@media (min-width: 992px) {
+  .block-intro-with-form:not(#NO_ID) .clients-video-popup {
+    top: calc(100% + 70px);
+    width: 100vw;
+    left: calc(480px - 50vw);
+    padding-left: calc(50vw - 480px);
+    padding-top: 60px;
+    padding-right: 0px;
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .block-intro-with-form:not(#NO_ID) .clients-video-popup {
+    top: calc(100% + 90px);
+    width: calc(100vw + 28px);
+    left: calc(574px - 50vw);
+    padding-left: calc(50vw - 574px);
+  }
+}
+.block-intro-with-form:not(#NO_ID) .clients-video-popup::before {
+  content: "";
+  background: rgb(249, 249, 249);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  z-index: -1;
+}
+
+.block-intro-with-form:not(#NO_ID) .clients-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(83, 106, 122);
+}
+
+.block-intro-with-form:not(#NO_ID) .logo-slider {
+  min-width: 100%;
+}
+@media (max-width: 992px) {
+  .block-intro-with-form:not(#NO_ID) {
+    padding: 38px 0px 0px 0px;
+    margin-bottom: 200px;
+    background-image: url("https://res.cloudinary.com/dv0yi7tc1/image/upload/v1641847745/mvix-header-gradient-mobile_fvn2ge.jpg") !important;
+  }
+
+  .block-intro-with-form:not(#NO_ID) .editor,
+  .block-intro-with-form:not(#NO_ID) .check-list {
+    max-width: 80%;
+  }
+
+  h1.section-title-md {
+    font-size: 24px;
+  }
+
+  .block-intro-with-form:not(#NO_ID) .editor {
+    margin-bottom: 24px;
+  }
+
+  .block-intro-with-form:not(#NO_ID) .check-list {
+    display: block;
+    margin-bottom: 36px;
+  }
+
+  .header-cta {
+    padding: 16px;
+    margin-bottom: 32px;
+  }
+
+  .header-cta__title {
+    margin: 0px 0px 16px 0px;
+  }
+
+  .header-cta__text {
+    margin: 0px 0px 16px 0px;
+  }
+
+  .header-cta__btn {
+    font-size: 16px;
+    width: 192px;
+    height: 56px;
+    line-height: 56px;
+  }
+
+  .clients-video-popup::before {
+    position: absolute;
+    left: calc(574px - 50vw);
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .block-intro-with-form:not(#NO_ID) .clients-title {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
