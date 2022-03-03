@@ -1,3 +1,23 @@
+convert.$('head').append(`
+<style>
+.calendly-inline-widget {
+  height: 1000px;
+}
+.elementor-column-gap-default
+  > .elementor-column
+  > .elementor-element-populated {
+  padding: 0;
+}
+.elementor-column.elementor-col-100.elementor-top-column.elementor-element.elementor-element-0692c1b {
+  width: 45%;
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+.rta_consultation {
+  width: 55%;
+}
+</style>
+`)
 const newCopySection = `
 <section class="rta_consultation">
 <div class="rta_row">
@@ -55,22 +75,6 @@ const newCopySection = `
   </div>
 </div>
 </section>
-
 `;
-// document
-//   .getElementById("page-region")
-//   .insertAdjacentHTML("beforeend", newCopySection);
-document
-  .querySelector(".yB2Kbs3Dw5W8t3rtYGUC.h_AkdPL8MB5JT8tEAEtM")
-  .insertAdjacentHTML("afterend", newCopySection);
 
-const calenderPart = document.querySelector(
-  "._HZ_GD6FPnIYxJMx_SII.dtQQRG24Xyq4Mv4e5_FW.Pc0zejgXjiYYmeWzt9Ia"
-);
-const calenderPartContainer = document.querySelector(".rta_date_time");
-calenderPartContainer.appendChild(calenderPart);
-
-var iframe = document.querySelector(
-  'iframe[src="https://calendly.com/designer-call/rta-design-consultation?embed_domain=rtaoutdoorliving.com&embed_type=Inline"]'
-);
-var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+convert.$('.elementor-container.elementor-column-gap-default').prepend(newCopySection);
