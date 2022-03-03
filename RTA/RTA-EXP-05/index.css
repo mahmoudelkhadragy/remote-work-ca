@@ -1,5 +1,12 @@
 .calendly-inline-widget {
-  height: 1000px;
+  height: 1000px !important;
+}
+#content
+  > div
+  > div
+  > section
+  > div.elementor-container.elementor-column-gap-default {
+  gap: 50px;
 }
 .elementor-column-gap-default
   > .elementor-column
@@ -13,4 +20,57 @@
 }
 .rta_consultation {
   width: 55%;
+}
+.rta_consultation h1 span {
+  color: #44c7f3;
+}
+.rta_list_item {
+  display: flex;
+}
+.rta_list_circle {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #44c7f3;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+.elementor-section.elementor-section-items-middle > .elementor-container {
+  align-items: inherit;
+}
+@media (min-width: 1023px) and (max-width: 1180px) {
+  #content
+    > div
+    > div
+    > section
+    > div.elementor-container.elementor-column-gap-default {
+    gap: 50px;
+    margin: 0 20px;
+  }
+}
+@media (min-width: 830px) and (max-width: 1180px) {
+  .rta_consultation {
+    width: 80%;
+    margin: auto;
+  }
+  .elementor-column.elementor-col-100.elementor-top-column.elementor-element.elementor-element-0692c1b {
+    width: 80%;
+    margin: auto;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+  .calendly-inline-widget {
+    height: 1200px !important;
+  }
+}
+@media (max-width: 829px) {
+  .rta_consultation {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .elementor-column.elementor-col-100.elementor-top-column.elementor-element.elementor-element-0692c1b {
+    width: 100%;
+    margin: 0 18px 30px;
+  }
 }
