@@ -66,12 +66,57 @@ var opt_cards = [
   },
   //The negative side of the Hermit card indicates a failure to take action in the world. You have not been decisive because of an excess of concern for the spiritual world. You have wavered in your worldly commitments, which is not a good thing in this case. You must see your duty properly and carry it through, or your plans will be ruined. 
   {
+    id: 'javascript:TarotDeckSubmitTarotCard(10);',
+    cardSubTitle: 'The Wheel of Fortune',
+    cardImg: 'https://www.astrology.com/images-US/tarot/results/tarot-reading-result-10.svg',
+    no: `<b>NO</b><br>The nature of fortune is that it changes, and, in your case, things may take a turn for the worse. Beyond the surface appearance, the mask that you wear for others, lies a deep feeling of loss. But bad luck is just bad luck and is not a permanent state. As easily as you lose, you can also win. Endure bad times so that the good times will come again.`,
+    yes: `<b>YES</b><br>The Wheel of Fortune indicates success and prosperity, the outcome of hard work. You have struggled to improve your career, finances, and relationships, and now you begin to see the fruits of your actions. Take heart in this joyful time, and remember to celebrate your good luck with your friends. It is rare in this world that one receives unconditional good.`,
+  },
+  {
     id: 'javascript:TarotDeckSubmitTarotCard(11);',
     cardSubTitle: 'Strength',
     cardImg: 'https://www.astrology.com/images-US/tarot/results/tarot-reading-result-11.svg',
     no: `<b>NO</b><br>This card indicates Strength that is not under the guidance of good judgment. You have a tendency to force your way through situations that are not to your liking. This can result in severed ties with potential allies. Learn to be more adaptable and flexible. Seek out the wisdom of a feminine figure. Only then will you succeed.`,
     yes: `<b>YES</b><br>The Strength card reveals that you face formidable obstacles, but you have the resources within you to overcome whatever comes your way. You have great courage radiating from your heart center, and you have many blessings in your life. As you take an inventory of the resources available to you, you will see that the situation is no cause for worry.`,
   },
+  {
+    id: 'javascript:TarotDeckSubmitTarotCard(12);',
+    cardSubTitle: 'The Hanged Man',
+    cardImg: 'https://www.astrology.com/images-US/tarot/results/tarot-reading-result-12.svg',
+    no: `<b>NO</b><br>The negative side of the Hanged Man indicates selfishness, an inability to give of oneself for others. You fear suffering, and this prevents you from moving forward in life. The path to goodness and wisdom always includes some pain. Until you embrace the pain of growth, you will remain stuck in your present situation. You must embrace the uncomfortable parts of life to evolve.`,
+    yes: `<b>YES</b><br> The Hanged Man indicates a spiritual, emotional, or physical trial that has purifying effects. The troubles that you have experienced lately have given you a more peaceful and compassionate view of the world. You are able to feel for others around you and see the temporary nature of all things and events. Others will look to you for guidance and comfort, and your deep inner resources will not fail.`,
+  },
+  {
+    id: 'javascript:TarotDeckSubmitTarotCard(14);',
+    cardSubTitle: 'Temperance',
+    cardImg: 'https://www.astrology.com/images-US/tarot/results/tarot-reading-result-14.svg',
+    no: `<b>NO</b><br>The negative side of the Temperance card represents a lower desire interfering with a higher desire. You have failed to regulate your own behavior, which has led to wavering, inefficient thinking and acting. You must learn to place your highest values first, otherwise you will be working at cross purposes. Success involves some sacrifice. Anything worth having will require endurance along the way.`,
+    yes: `<b>YES</b><br>Temperance indicates breaking the bonds of bad habits, practicing regularity and self-discipline. You are on the verge of a breakthrough, because you have learned to master yourself. Your mind has stopped wandering from one thing to the next, and you pursue your dreams without interruption. Success is not far away, as a natural outcome of your past and present good actions.`,
+  },
+  {
+    id: 'javascript:TarotDeckSubmitTarotCard(15);',
+    cardSubTitle: 'The Devil',
+    cardImg: 'https://www.astrology.com/images-US/tarot/results/tarot-reading-result-15.svg',
+    no: `<b>NO</b><br>The negative side of the Devil card represents an evil outcome to the situation, resulting from misuse of material power. You are the victim or perpetrator of wrong due to bad influences in your life. The evil will only be made worse unless you change course by finding a new set of friends or seeking wise advice. Evil begets evil.`,
+    yes: `<b>YES</b><br>The Devil represents materialism and material force. You have obstacles in your path, but you have the resources that you need in order to address the challenge. This may be money or physical strength, power belonging to the everyday sphere. A good outcome will result from expending your power at this time. Do not hold back, and you will have what you want.`,
+  },
+  // The Devil card represents jealousy related to possessions here. You want what someone else has, and this produces constant irritation. You will have to let go of what you desire, as you will not be able to obtain it at this time. The person who you resent may be completely unaware of your feelings, and you are only harming yourself. Jealousy is a form of self-torture.
+  {
+    id: 'javascript:TarotDeckSubmitTarotCard(16);',
+    cardSubTitle: 'The Tower',
+    cardImg: 'https://www.astrology.com/images-US/tarot/results/tarot-reading-result-16.svg',
+    no: `<b>NO</b><br> The downside of the Tower card represents a fall, or ruin coming to you and your endeavors. The fall will be in proportion to the size of your ambitions and the extent to which you have gotten ahead of your ability to contain the situation. You have been overly optimistic and have promised more than you can deliver. You stand on shaky foundations and will soon see some ill effects.`,
+    yes: `<b>YES</b><br>The Tower represents strength, courage, and ambition. It also means a warlike, aggressive attitude. You see what you want and stop at nothing to achieve it. The card should be regarded as a good sign that you will be able to prosper in your undertaking. You will prevail over your obstacles and enemies and have success in what you do. `,
+  },
+  {
+    id: 'javascript:TarotDeckSubmitTarotCard(17);',
+    cardSubTitle: 'The Star',
+    cardImg: 'https://www.astrology.com/images-US/tarot/results/tarot-reading-result-17.svg',
+    no: `<b>NO</b><br>The negative side of the Star card represents loss of hope and disappointment, a dream put on hold. You sense a lack of abundance in your life and see no way to achieve your aims. This results from temporary bad luck and not through any fault of your own. In time the situation will change, and you can try again to achieve the life of your dreams.`,
+    yes: `<b>YES</b><br>The very positive Star card represents hope for a bright future and dreams coming to fruition. The thoughts that you have sent out into the Universe over the years will achieve the desired results. You are very close to the life you have imagined, and you will begin to see signs that you are getting what you want. This will happen in the next few days.`,
+  },
+  //yes- The Star card represents good fortune and abundance coming into your life. The wishes that you made long ago are now coming into existence, and you feel like a child again. The heavens have aligned in your favor, and the Universe returns the good things that you have put out into the world. You have good karma, and good things will result from your activity. 
+
 
 
 
