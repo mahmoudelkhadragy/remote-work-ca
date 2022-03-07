@@ -108,6 +108,7 @@ var opt_cards = [
     no: `<b>NO</b><br> The downside of the Tower card represents a fall, or ruin coming to you and your endeavors. The fall will be in proportion to the size of your ambitions and the extent to which you have gotten ahead of your ability to contain the situation. You have been overly optimistic and have promised more than you can deliver. You stand on shaky foundations and will soon see some ill effects.`,
     yes: `<b>YES</b><br>The Tower represents strength, courage, and ambition. It also means a warlike, aggressive attitude. You see what you want and stop at nothing to achieve it. The card should be regarded as a good sign that you will be able to prosper in your undertaking. You will prevail over your obstacles and enemies and have success in what you do. `,
   },
+  //no- The negative side of the Tower card represents a warning of some dangerous situation. An enemy approaches your territory, and your defenses are not strong enough to cope with the situation. There may still be time to defend yourself if you act right away. Gather your true friends around you and be on the lookout for an attack. This could come in the form of slander or some physical threat. 
   {
     id: 'javascript:TarotDeckSubmitTarotCard(17);',
     cardSubTitle: 'The Star',
@@ -116,7 +117,29 @@ var opt_cards = [
     yes: `<b>YES</b><br>The very positive Star card represents hope for a bright future and dreams coming to fruition. The thoughts that you have sent out into the Universe over the years will achieve the desired results. You are very close to the life you have imagined, and you will begin to see signs that you are getting what you want. This will happen in the next few days.`,
   },
   //yes- The Star card represents good fortune and abundance coming into your life. The wishes that you made long ago are now coming into existence, and you feel like a child again. The heavens have aligned in your favor, and the Universe returns the good things that you have put out into the world. You have good karma, and good things will result from your activity. 
+  {
+    id: 'javascript:TarotDeckSubmitTarotCard(18);',
+    cardSubTitle: 'The Moon',
+    cardImg: 'https://www.astrology.com/images-US/tarot/results/tarot-reading-result-18.svg',
+    no: `<b>NO</b><br>The negative side of the Star card represents loss of hope and disappointment, a dream put on hold. You sense a lack of abundance in your life and see no way to achieve your aims. This results from temporary bad luck and not through any fault of your own. In time the situation will change, and you can try again to achieve the life of your dreams.`,
+    yes: `<b>YES</b><br>The very positive Star card represents hope for a bright future and dreams coming to fruition. The thoughts that you have sent out into the Universe over the years will achieve the desired results. You are very close to the life you have imagined, and you will begin to see signs that you are getting what you want. This will happen in the next few days.`,
+  },
+  {
+    id: 'javascript:TarotDeckSubmitTarotCard(19);',
+    cardSubTitle: 'The Sun',
+    cardImg: 'https://www.astrology.com/images-US/tarot/results/tarot-reading-result-19.svg',
+    no: `<b>NO</b><br>The negative side of the Star card represents loss of hope and disappointment, a dream put on hold. You sense a lack of abundance in your life and see no way to achieve your aims. This results from temporary bad luck and not through any fault of your own. In time the situation will change, and you can try again to achieve the life of your dreams.`,
+    yes: `<b>YES</b><br>The Sun represents good thoughts, happiness, and contentment. You find a good place in your life where you experience satisfaction. Your worries fade away for a time and you are able to relax. All of the fears that surrounded you for so long now fade into the background. This is a result more of your own attitude changing rather than a turn in events.`,
+  },
 
+
+  {
+    id: 'javascript:TarotDeckSubmitTarotCard(20);',
+    cardSubTitle: 'The Judgement',
+    cardImg: 'https://www.astrology.com/images-US/tarot/results/tarot-reading-result-20.svg',
+    no: `<b>NO</b><br>The negative side of the Judgement card means that you will not be able to escape from the negative consequences of your actions. You will have to pay the penalty for what you have done, and your actions will be revealed in the light of day. The only way to improve the situation will be to fully admit wrongdoing and accept whatever punishment waits for you.`,
+    yes: `<b>YES</b><br>The very positive Star card represents hope for a bright future and dreams coming to fruition. The thoughts that you have sent out into the Universe over the years will achieve the desired results. You are very close to the life you have imagined, and you will begin to see signs that you are getting what you want. This will happen in the next few days.`,
+  },
 
 
 
