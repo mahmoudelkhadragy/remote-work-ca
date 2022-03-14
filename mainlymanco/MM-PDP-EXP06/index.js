@@ -28,89 +28,7 @@ setTimeout(() => {
   $(".product_section .product__images .product-gallery").hide();
   $('#shopify-section-product__main section.section.is-width-standard').append($('#shopify-section-6bff8187-4d01-448c-b804-d59044790bda'));
   $(".product_section .product__images").append(`
-        <div class="carousel_kh carousel-main">
-        <div class="optimize_carousel_cell">
-            <img
-            src="//cdn.shopify.com/s/files/1/1762/4231/products/Beef-Jerky-Flower-Bouquet_2048_compressed_1200x.jpg?v=1627803667"
-            alt="Beef Jerky Flower Bouquet"
-            />
-        </div>
-        <div class="optimize_carousel_cell">
-            <img
-            src="//cdn.shopify.com/s/files/1/1762/4231/products/beef-jerky-flower-bouquet-unboxing-2048-optimized_1200x.jpg?v=1627803958"
-            alt="Beef Jerky Flower Bouquet"
-            />
-        </div>
-        <div class="optimize_carousel_cell">
-            <img
-            src="//cdn.shopify.com/s/files/1/1762/4231/products/beef-jerky-flower-bouquet-unboxing-2-2048px-optimized_1200x.jpg?v=1627803777"
-            alt="Beef Jerky Flower Bouquet"
-            />
-        </div>
-        <div class="optimize_carousel_cell">
-            <img
-            src="//cdn.shopify.com/s/files/1/1762/4231/products/beef-jerky-flower-bouquet-14435002318931_1200x.png?v=1627803667"
-            alt="Beef Jerky Flower Bouquet"
-            />
-        </div>
-        <div class="optimize_carousel_cell">
-            <img
-            src="https://i.ibb.co/mTVLpS1/Group-29.png"
-            alt="Beef Jerky Flower Bouquet"
-            />
-        </div>
-        <div class="optimize_carousel_cell">
-            <img
-            src="https://i.ibb.co/M27hJKm/Group-35.png"
-            alt="Beef Jerky Flower Bouquet"
-            />
-        </div>
-        </div>
-        <div class="carousel_thumbnails">
-        <div class="carousel-thumb active">
-            <img
-            data-index="0"
-            src="//cdn.shopify.com/s/files/1/1762/4231/products/Beef-Jerky-Flower-Bouquet_2048_compressed_1200x.jpg?v=1627803667"
-            alt="Beef Jerky Flower Bouquet"
-            />
-        </div>
-        <div class="carousel-thumb">
-            <img
-            data-index="1"
-            src="//cdn.shopify.com/s/files/1/1762/4231/products/beef-jerky-flower-bouquet-unboxing-2048-optimized_1200x.jpg?v=1627803958"
-            alt="Beef Jerky Flower Bouquet"
-            />
-        </div>
-        <div class="carousel-thumb">
-            <img
-            data-index="2"
-            src="//cdn.shopify.com/s/files/1/1762/4231/products/beef-jerky-flower-bouquet-unboxing-2-2048px-optimized_1200x.jpg?v=1627803777"
-            alt="Beef Jerky Flower Bouquet"
-            />
-        </div>
-        <div class="carousel-thumb">
-            <img
-            data-index="3"
-            src="//cdn.shopify.com/s/files/1/1762/4231/products/beef-jerky-flower-bouquet-14435002318931_1200x.png?v=1627803667"
-            alt="Beef Jerky Flower Bouquet"
-            />
-        </div>
-        <div class="carousel-thumb">
-            <img
-            data-index="4"
-            src="https://i.ibb.co/mTVLpS1/Group-29.png"
-            alt="Beef Jerky Flower Bouquet"
-            />
-        </div>
-        <div class="carousel-thumb">
-            <img
-            data-index="5"
-            src="https://i.ibb.co/M27hJKm/Group-35.png"
-            alt="Beef Jerky Flower Bouquet"
-            />
-        </div>
-        </div>
-    </div>
+
     <div class="optimize_carousel_popup">
       <a
         href="//cdn.shopify.com/s/files/1/1762/4231/products/Beef-Jerky-Flower-Bouquet_2048_compressed_1200x.jpg?v=1627803667"
@@ -208,3 +126,5 @@ setTimeout(() => {
 
 
 }, 5200);
+
+
