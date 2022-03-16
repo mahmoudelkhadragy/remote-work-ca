@@ -126,6 +126,7 @@ header.opt_header .opt_row {
   height: 100%;
   background-color: rgba(22, 37, 53, 0.6);
   z-index: 1;
+  display: none;
 }
 @media (max-width: 575.98px) {
   header.opt_header {
@@ -202,6 +203,9 @@ header.opt_header .opt_row {
     z-index: 2222;
     position: relative;
   }
+  .opt_header .over_lay {
+    display: block;
+  }
 }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -247,16 +251,183 @@ header.opt_header .opt_row {
   }
 }
 
+/* opt_plan */
+.opt_plan .main_h2 {
+  font-weight: 500;
+}
+.opt_plan .main_p {
+  font-weight: 400;
+}
+.opt_plan .plan_card h5 {
+  font-size: 20px;
+}
+.opt_plan .plan_img {
+  background-color: #466cce;
+  display: inline-block;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  width: 95px;
+  height: 95px;
+  line-height: 95px;
+}
+.opt_plan .last_p {
+  width: 60%;
+}
+
+@media (max-width: 767.98px) {
+  .opt_plan .last_p {
+    width: 95%;
+  }
+  .opt_plan .plan_card:first-of-type,
+  .opt_plan .plan_card:nth-of-type(2) {
+    margin-bottom: 30px;
+  }
+}
+
+/* opt_back */
+.opt_back {
+  height: 560px;
+  background-image: url(https://i.ibb.co/Lgk3KJW/Rectangle-72-min.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+@media (max-width: 575.98px) {
+  .opt_back {
+    background-position: 86%;
+  }
+}
+
 /*  */
+.opt_try {
+  padding: 40px 0;
+  height: 100%;
+}
+.opt_try_img {
+  width: 50%;
+  margin: -100px auto 0;
+  padding-top: 20px;
+}
+.opt_try_card {
+  background-color: #fae454;
+  width: 80%;
+  margin: auto;
+  padding: 20px 0 105px;
+}
+.opt_try .main_h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 30px;
+  text-transform: inherit;
+}
+.opt_try .main_p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.opt_try .yellow_arrow {
+  display: none;
+}
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+  .opt_try_img {
+    width: 100%;
+  }
+  .opt_try_card {
+    background-color: #fff;
+    width: 100%;
+  }
+  .opt_try .yellow_arrow {
+    display: block;
+    margin: auto;
+  }
+  .opt_try .black_arrow {
+    display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .opt_try_img {
+    width: 95%;
+  }
+  .opt_try_card {
+    background-color: #fff;
+    width: 100%;
+  }
+  .opt_try .yellow_arrow {
+    display: block;
+    margin: auto;
+  }
+  .opt_try .black_arrow {
+    display: none;
+  }
+}
+/* workouts */
+.workouts {
+  background-image: url(https://i.ibb.co/vVjcR2Z/sec4.png);
+  background-position: left;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+}
+.workouts .workouts_content {
+  background-color: #466cce;
+}
+@media (max-width: 767.98px) {
+  .workouts {
+    background-image: none;
+  }
+}
+
+/* opt_signup */
+.opt_signup {
+  padding: 40px 0;
+  background-color: #d85743;
+  color: #fff;
+}
+.form_container h2 {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.form_container p {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.form_container {
+  width: 80%;
+  margin: auto;
+}
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+  .form_container {
+    width: 70%;
+  }
+  .form_container h2 {
+    font-size: 31px;
+  }
+}
+@media (max-width: 575.98px) {
+  .form_container h2 {
+    font-size: 28px;
+  }
+  .form_container {
+    width: 90%;
+  }
+}
 
 /* opt ready */
 .opt_ready {
   padding: 40px 0;
 }
+.opt_ready .main_h2 {
+  font-weight: 500;
+  font-size: 30px;
+}
+.opt_ready .main_p {
+  font-size: 16px;
+  font-weight: 400;
+}
 .opt_ready_figure {
   display: flex;
   align-items: center;
-  background-image: url(https://i.ibb.co/myHRWCq/sec2-min.png);
+  background-image: url(https://i.ibb.co/VgGjc0j/Rectangle-64-min.png);
   background-repeat: no-repeat;
   height: 600px;
   background-size: 64%;
@@ -355,153 +526,6 @@ header.opt_header .opt_row {
     font-size: 15px;
   }
 }
-
-/* opt_join */
-.opt_join {
-  padding: 0 0 40px 0;
-}
-.opt_join a.join_button {
-  display: block;
-  width: 270px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  background-color: #162535;
-  color: #fff;
-  border-radius: 5px;
-  margin: 10px auto 40px;
-  padding: 15px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-}
-.opt_join a.join_button:hover {
-  text-decoration: none;
-}
-.opt_join .join_info {
-  width: 55%;
-  margin: 50px auto;
-  position: relative;
-}
-.opt_join .join_info::after {
-  content: "";
-  position: absolute;
-  left: -46px;
-  top: 0;
-  width: 8px;
-  height: 100%;
-  transform: rotateZ(14deg);
-  background-color: #fae454;
-}
-.opt_join .join_info p {
-  font-weight: 500;
-}
-.opt_join .arrow_down {
-  margin: auto;
-  text-align: center;
-  margin-top: 60px;
-}
-.opt_join .arrow_down img {
-  width: 60px;
-  cursor: pointer;
-}
-@media (max-width: 575.98px) {
-  .opt_join .join_info {
-    width: 98%;
-    margin: 50px auto;
-  }
-  .opt_join .join_info::after {
-    display: none;
-  }
-}
-@media (min-width: 575.98px) and (max-width: 767.98px) {
-  .opt_join .join_info {
-    width: 88%;
-    margin: 50px 0px 50px 50px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1100px) {
-  .opt_join .join_info {
-    width: 70%;
-  }
-}
-
-/*  */
-.opt_try {
-  padding: 40px 0;
-  height: 100%;
-  background-color: #fae454;
-  clip-path: polygon(0 0, 100% 19%, 100% 100%, 0 100%);
-}
-.opt_try_img {
-  width: 50%;
-  margin: auto;
-  padding-top: 20px;
-}
-.opt_try .main_h2 {
-  margin-top: 120px;
-}
-@media (min-width: 575.98px) and (max-width: 767.98px) {
-  .opt_try_img {
-    width: 80%;
-  }
-  .opt_try {
-    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
-  }
-}
-@media (max-width: 575.98px) {
-  .opt_try_img {
-    width: 95%;
-  }
-  .opt_try {
-    clip-path: polygon(0 0, 100% 13%, 100% 100%, 0 100%);
-  }
-}
-/* workouts */
-.workouts {
-  background-image: url(https://i.ibb.co/vVjcR2Z/sec4.png);
-  background-position: left;
-  justify-content: flex-end;
-  background-repeat: no-repeat;
-}
-.workouts .workouts_content {
-  background-color: #466cce;
-}
-@media (max-width: 767.98px) {
-  .workouts {
-    background-image: none;
-  }
-}
-
-/* opt_signup */
-.opt_signup {
-  padding: 40px 0;
-  background-color: #d85743;
-  color: #fff;
-}
-
-.form_container {
-  width: 50%;
-  margin: auto;
-}
-@media (min-width: 575.98px) and (max-width: 767.98px) {
-  .form_container {
-    width: 70%;
-  }
-  .form_container h2 {
-    font-size: 31px;
-  }
-}
-@media (max-width: 575.98px) {
-  .form_container h2 {
-    font-size: 28px;
-  }
-  .form_container {
-    width: 90%;
-  }
-}
 footer {
   background-color: #162535;
 }
@@ -533,7 +557,7 @@ a[href="https://www.activecampaign.com/lp/sem/pages?utm_source=direct&utm_campai
   background: #162535;
   font-family: "Montserrat", sans-serif !important;
   font-size: 16px !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   transition: all 0.2s ease-in-out;
 }
 
