@@ -1,3 +1,10 @@
+
+$('head').append(`<style>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</style>`)
+$('body').append(`<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>`)
 $(".optimize_join").on("click", function () {
   var scrollTo = $("form.variations_form.cart").offset().top - 20;
   $("html, body").animate(
@@ -7,6 +14,9 @@ $(".optimize_join").on("click", function () {
     700
   );
 });
+
+
+
 
 (function () {
   setTimeout(() => {

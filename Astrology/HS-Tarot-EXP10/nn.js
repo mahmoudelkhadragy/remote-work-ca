@@ -1,4 +1,4 @@
-$(document).ready(function () {
+setTimeout(() => {
   var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
   var counter = 0;
   var opt_cards = [
@@ -161,53 +161,6 @@ $(document).ready(function () {
     //no - The Fool does not realize that he laughs and dances on the edge of a cliff. Your situation holds many dangers that you have not recognized. You have failed to listen to good advice and have covered up obstacles with false optimism. You must develop a more serious attitude in order to escape from the danger that you now face. It may be too late to avoid the danger. 
   ];
 
-  $('.grid__head').append(`
-  <div class="opt_predict_poppup">
-    <div class="opt_join_plus_container">
-      <div class="opt_join_plus">
-        <span class="close opt_join_close"></span>
-        <h4 class="opt_h4">Ready for real predictions, guidance, and advice from the stars?</h4>
-        <img src="https://i.ibb.co/zRWdwTP/Group-25-min.png" alt="astrology plus">
-        <a href="https://shop.astrology.com/product/astrology-plus/" class="opt_join">Join Astrology+</a>
-      </div>
-    </div>
-  </div>
-  <div class="opt_card_popup">
-  <div class="opt_result_container">
-    <div class="opt_result">
-      <span class="close opt_card_close"></span>
-      <h2 class="opt_yes_no_head">Yes or No Tarot Reading</h2>
-      <div
-        class="tarot-reading-result grid-md-3c grid-md-gap-3 grid-lg-5c grid-lg-gap-4"
-      >
-        <div class="result-media grid-md-c1-s1 grid-lg-c1-s2">
-          <img
-            class="img-responsive opt_img"
-            src="/images-US/tarot/results/tarot-reading-result-20.svg"
-            alt="Tarot Reading Result"
-          />
-        </div>
-        <div class="result-content grid-md-c2-s2 grid-lg-c3-s3">
-          <h4 class="result-title opt_title">The Judgement</h4>
-          <p class="result-description opt_desc">
-            <b>YES</b><br />The Judgement card represents the last day, the
-            culmination of a long process, things reaching completion and
-            fulfillment. You have fought the good fight for many years, and your
-            reward is not far away. All of your confusion will be made clear,
-            and all of your wounds will be healed. You have reached the place
-            that you have sought for a long time.
-          </p>
-          <input
-            value="Pick another card "
-            class="btn btn--sm btn__primary opt_other_btn"
-            type="button"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`);
   $(".deck a").each(function () {
     $(this).attr("id", ($(this).attr("onclick")));
     $(this).prop("onclick", null).off("click");
@@ -245,150 +198,7 @@ $(document).ready(function () {
   function showAstrology() {
     $('.opt_predict_poppup').show();
   }
-  $('head').append(`
-  <link href="https://www.dafontfree.net/embed/Y2FzbG9uZ3JhZC1yZWd1bGFyJmRhdGEvMjMvYy8xMTc0NzQvQ2FzbG9uR3JhRC50dGY" rel="stylesheet" type="text/css"/>
-<style>
-.opt_card_popup {
-  background-color: rgba(0, 0, 0, 0.95);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  z-index: 99999;
-}
-.opt_result_container{
-  position:absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.opt_result{
-  position: relative;
-}
-.close {
-  position: absolute;
-  right: 10px;
-  top: -42px;
-  width: 32px;
-  height: 32px;
-  opacity: 1;
-  cursor: pointer;
-  transition: all .2s ease-in-out;
-}
-.close:hover {
-  opacity: .6;
-}
-.close:before, .close:after {
-  position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 33px;
-  width: 2px;
-  background-color: #fff;
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
-}
-.opt_predict_poppup {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-.opt_join_plus_container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.opt_join_plus {
-  position: relative;
-}
-.opt_h4 {
-  width: 222px;
-  text-align: center;
-  position: absolute;
-  top: 86px;
-  left: 95px;
-  font-family: "caslongrad", sans-serif !important;
-  font-size: 20px !important;
-}
-.opt_join{
-  position: absolute;
-  bottom: 87px;
-  left: 111px;
-  background-color: #00CFBD;
-  padding: 11px 8px 8px;
-  width: 190px;
-  text-align: center;
-  border-radius: 7px;
-  font-weight: 600;
-  color: #101010;
-  letter-spacing: 0px;
-}
-.opt_join_close{
-  right: 16px;
-  top: 8px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #4D48AF;
-  background: #fff;
-  border-radius: 27px;
-}
-.opt_join_close:before, .opt_join_close:after {
-  left: 13px;
-  top: 6px;
-  height: 17px;
-  background-color: #4D48AF !important;
-}
-@media (max-width: 767px){
-  .opt_result{
-    width: 90%;
-    margin: auto;
-  }
-}
-@media (max-width: 450px){
-  .opt_h4{
-    width: 176px;
-    top: 65px;
-    left: 63px;
-    font-size: 15px !important;
-  }
-  .opt_join{
-    bottom: 64px;
-    left: 75px;
-    padding: 10px 8px 5px;
-    width: 155px;
-  }
-  .opt_join_close{
-    right: 27px;
-    top: -10px;
-    width: 26px;
-    height: 26px;
-  }
-  .opt_join_close:before, .opt_join_close:after{
-    left: 11px;
-    top: 5px;
-    height: 15px;
-  }
-  .opt_join_plus img{
-    width: 300px;
-  }
-}
-`);
+
   function shuffle(array) {
     let currentIndex = array.length, randomIndex;
 
@@ -405,7 +215,6 @@ $(document).ready(function () {
     }
     return array;
   }
-
   function rearrangeCards() {
     var shuffeledArr = shuffle(arr.slice(0, 12));
     $('.deck a').each(function (i) {
@@ -413,5 +222,5 @@ $(document).ready(function () {
       $(this).attr("id", onclickVal);
     })
   }
-});
+}, 500)
 
