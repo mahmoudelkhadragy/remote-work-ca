@@ -1,10 +1,601 @@
+$("body.product-details-beef-jerky-flowers-pint").append(`
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>`);
 
-$('head').append(`<style>
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
+$("head").append(`
+
+<link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick.js">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-</style>`)
-$('body').append(`<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>`)
+
+<style>
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
+  display: none;
+}
+#product-96410 .related.products {
+  display: none;
+}
+
+/* here products */
+
+.optimize_carousel_popup {
+  display: none;
+}
+.optimize_carousel_popup a {
+  width: 40%;
+}
+.optimize_carousel_popup a img {
+  width: 100%;
+}
+
+.opt_main_mobile {
+  display: none;
+}
+body.v3 h2 {
+  line-height: 1.3;
+}
+section.related {
+  display: none;
+}
+
+.optimize_what {
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+.opt_row {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.optimize_what > h2 {
+  text-align: center;
+  margin-bottom: 25px !important;
+}
+.optimize_what p.description {
+  width: 70%;
+  text-align: center;
+  font-family: "Khand", sans-serif;
+  margin: auto;
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  font-weight: normal;
+  margin-bottom: 25px !important;
+}
+.optimize_what .products img,
+.optimize_other_bought img {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+  transition: all 0.2s ease-in-out;
+}
+.optimize_what .products img {
+  cursor: pointer;
+}
+.optimize_what .products .opt_product,
+.optimize_other_bought .opt_product {
+  padding: 10px;
+  width: 30.5%;
+}
+.opt_product:hover .opt_info_product .title {
+  text-decoration: underline;
+}
+.opt_product:hover .opt_info_product p {
+  text-decoration: underline;
+}
+.opt_product:hover .opt_product img {
+  transform: scale(1.1);
+}
+.opt_product .opt_second_img{
+  display: none;
+}
+.optimize_what .opt_info_product p {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  font-family: merriweather, serif;
+  transition: all 0.2s ease-in-out;
+}
+.opt_info_product .title {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+}
+.opt_product p.desc {
+  margin-bottom: 10px;
+}
+.opt_product p.price {
+  margin-bottom: 0;
+  font-family: khand, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.optimize_what .opt_product p.price {
+  padding-top: 10px;
+}
+.optimize_join {
+  display: block;
+  width: 154px;
+  margin: 70px auto 0 auto;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 15px 6px 15px;
+  background-color: #4d48af;
+  color: #fff;
+  border-radius: 7px;
+  font-family: "Khand", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.optimize_join:hover {
+  background-color: #fff;
+  color: #4d48af;
+}
+
+.summary.entry-summary .product_title.entry-title,
+.summary.entry-summary .woocommerce-product-details__short-description {
+  display: block;
+}
+.opt_image_banner {
+  padding-bottom: 20px;
+  display: none;
+  margin: auto;
+  text-align: center;
+}
+.opt_image_banner img {
+  width: 100%;
+}
+.woocommerce-product-gallery .flex-control-nav.flex-control-thumbs,
+.woocommerce-product-gallery .flex-viewport {
+  display: block;
+}
+
+.optimize_product_info {
+  padding: 40px 0;
+}
+.optimize_row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.optimize_product_info .optimize_head {
+  text-align: center;
+}
+.optimize_product_info .optimize_product_item {
+  text-align: center;
+  padding: 10px;
+}
+.item_image img {
+  max-width: 200px;
+  margin: auto;
+}
+.before_last{
+  margin-left: 17%;
+}
+.woocommerce-product-gallery .flex-control-nav.flex-control-thumbs {
+  display: none;
+}
+@media (max-width: 767px) {
+  .optimize_row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 581px) {
+  .opt_cust .opt_cust_img {
+    width: 10%;
+  }
+  .opt_cust {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 580px) {
+  .opt_row {
+    flex-direction: column;
+  }
+  .optimize_what .products .opt_product,
+  .optimize_other_bought .opt_product {
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+  }
+  .opt_product p.price {
+    font-size: 18px;
+  }
+  .optimize_what > p {
+    width: 99%;
+  }
+  .opt_for_big {
+    display: none;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+  .optimize_what p.description {
+    width: 100%;
+  }
+  .opt_other_first {
+    display: none;
+  }
+  .opt_other_second {
+    display: block;
+  }
+  .opt_main_mobile {
+    display: block;
+  }
+  .opt_image_banner {
+    margin-bottom: 15px;
+    display: block;
+  }
+  .woocommerce-product-gallery .flex-control-nav.flex-control-thumbs,
+  .woocommerce-product-gallery .flex-viewport {
+    display: none;
+  }
+  .before_last{
+    margin-left: 0;
+  }
+}
+</style>
+`);
+
+$(".optimize_product_info").after(`
+<section class="optimize_what">
+<h2 class="h2_title">What Does Astrology+ Have to Offer?</h2>
+<p class="description">
+  Discover more about your past, present, and future with premium readings
+  and charts. Your Astrology+ Membership includes all of this, and more...
+</p>
+<div class="products opt_row">
+  <div class="opt_product">
+    <div class="opt_img_product carousel_kh">
+      <img
+        src="https://shop.astrology.com/wp-content/uploads/sites/5/2021/10/a-com-2022-horoscope.png"
+        alt="2022 Premium Horoscope"
+      />
+    </div>
+    <a
+      class="opt_info_product"
+      href="https://shop.astrology.com/product/yearly-horoscope/?utm_source=store&amp;utm_medium=site&amp;utm_campaign=astro-store"
+      target="_blank"
+    >
+      <h4 class="title">2022 Premium Horoscope</h4>
+      <p class="desc">
+        Take charge of your romantic life, career, and personal
+        aspirations in 2022. Discover your greatest opportunities for
+        growth and success.
+      </p>
+      <p class="price">From: $19.99 / year</p>
+    </a>
+  </div>
+  <div class="opt_product">
+    <div class="opt_img_product carousel_kh">
+      <img
+        src="https://shop.astrology.com/wp-content/uploads/sites/5/2019/12/birthchartstore2-010-768x768.png"
+        alt="Birth Horoscope (+ Natal Chart)"
+      />
+    </div>
+    <a
+      class="opt_info_product"
+      href="https://shop.astrology.com/product/birth-horoscope-natal-chart/?utm_source=store&amp;utm_medium=site&amp;utm_campaign=astro-store"
+      target="_blank"
+    >
+      <h4 class="title">Birth Horoscope (+ Natal Chart)</h4>
+      <p class="desc">
+        Dig deep into your personality traits, your unique
+        characteristics, and your potential for growth based on the stars’
+        alignment at the moment of your birth.
+      </p>
+      <p class="price">$24.95</p>
+    </a>
+  </div>
+
+  <div class="opt_product">
+    <div class="opt_img_product carousel_kh">
+      <img
+        src="https://i.ibb.co/jR32dT1/birthchartstore2-010-1.png"
+        alt="natal moon report"
+      />
+      <img
+        class="opt_second_img"
+        src="https://i.ibb.co/Z6xq067/bc-aplus-min.png"
+        alt="Monthly Full Moon"
+      />
+    </div>
+    <a class="opt_info_product" href="#">
+      <h4 class="title">Monthly Full Moon Readings</h4>
+      <p class="desc">
+        Align yourself with the universe, let go of negative energy, and
+        get a fresh start to push towards your goals each month.
+      </p>
+      <p class="price">(Astrology+ Exclusive!)</p>
+    </a>
+  </div>
+
+  <div class="opt_product">
+    <div class="opt_img_product carousel_kh">
+      <img
+        src="https://i.ibb.co/7tJV40m/birthchartstore2-010-2.png"
+        alt="Daily Personal Horoscope"
+      />
+    </div>
+    <a class="opt_info_product" href="#">
+      <h4 class="title">
+        Daily Personal Horoscope Based on Your Birth Chart
+      </h4>
+      <p class="desc">
+        Take charge of your romantic life, career, and personal
+        aspirations in 2022. Discover your greatest opportunities for
+        growth and success.
+      </p>
+      <p class="price">$25 Value</p>
+    </a>
+  </div>
+
+  <div class="opt_product">
+    <div class="opt_img_product carousel_kh">
+      <img
+        src="https://i.ibb.co/2kXfLDK/birthchartstore2-010-3.png"
+        alt="Today’s Astrology"
+      />
+      <img
+        class="opt_second_img"
+        src="https://i.ibb.co/tpYYVss/todays-astrology-min.png"
+        alt="Today’s Astrology2"
+      />
+    </div>
+    <a class="opt_info_product" href="#">
+      <h4 class="title">Today’s Astrology</h4>
+      <p class="desc">
+        Stay in sync with every day planetary transits and more with daily
+        astrological updates.
+      </p>
+      <p class="price">(Astrology+ Exclusive!)</p>
+    </a>
+  </div>
+
+  <div class="opt_product">
+    <div class="opt_img_product carousel_kh">
+      <img
+        src="https://i.ibb.co/rfyfhK9/birthchartstore2-010-1-1.png"
+        alt="Today’s Astrology"
+      />
+      <img
+        class="opt_second_img"
+        src="https://i.ibb.co/VwD4X3y/weeklyhoro-aplus-min.png"
+        alt="Today’s Astrology2"
+      />
+    </div>
+    <a class="opt_info_product" href="#">
+      <h4 class="title">Premium Weekly Horoscope</h4>
+      <p class="desc">
+        Get full clarity to prepare for the week ahead with personal
+        weekly horoscopes based on your unique birth chart.
+      </p>
+      <p class="price">(Astrology+ Exclusive!)</p>
+    </a>
+  </div>
+  <div class="opt_product">
+    <div class="opt_img_product carousel_kh">
+      <img
+        src="https://i.ibb.co/fDQ5FFp/birthchartstore2-010-3-1.png"
+        alt="Today’s Astrology"
+      />
+      <img
+        class="opt_second_img"
+        src="https://i.ibb.co/BgpCWZ8/astrologycalendar-aplus-min.png"
+        alt="Today’s Astrology2"
+      />
+    </div>
+    <a class="opt_info_product" href="#">
+      <h4 class="title">Personal Astrology Calendar</h4>
+      <p class="desc">
+        Keep up with all major astrological events synced directly to your
+        phone and customized for your sign.
+      </p>
+      <p class="price">(Astrology+ Exclusive!)</p>
+    </a>
+  </div>
+
+  <div class="opt_product">
+    <div class="opt_img_product carousel_kh">
+      <img
+        src="https://i.ibb.co/pJ3jXq4/birthchartstore2-010-1-2.png"
+        alt="Today’s Astrology"
+      />
+      <img
+        class="opt_second_img"
+        src="https://i.ibb.co/Z6xq067/bc-aplus-min.png"
+        alt="Today’s Astrology2"
+      />
+    </div>
+    <a class="opt_info_product" href="#" target="_blank">
+      <h4 class="title">Live Birth Chart Reading</h4>
+      <p class="desc">
+        Have your birth chart interpreted by an expert. Dig into your
+        personality traits, strengths, and opportunities with guidance
+        from an astrologer.
+      </p>
+      <p class="price">(Annual Plan Only)</p>
+    </a>
+  </div>
+</div>
+
+<span class="optimize_join">JOIN ASTROLOGY+</span>
+</section>
+
+<div class="optimize_carousel_popup">
+<a
+  href="https://shop.astrology.com/wp-content/uploads/sites/5/2021/10/a-com-2022-horoscope.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://shop.astrology.com/wp-content/uploads/sites/5/2021/10/a-com-2022-horoscope.png"
+    alt="natal moon report"
+  />
+</a>
+<a
+  href="https://shop.astrology.com/wp-content/uploads/sites/5/2019/12/birthchartstore2-010-768x768.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://shop.astrology.com/wp-content/uploads/sites/5/2019/12/birthchartstore2-010-768x768.png"
+    alt="natal moon report"
+  />
+</a>
+<a
+  href="https://i.ibb.co/jR32dT1/birthchartstore2-010-1.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://i.ibb.co/jR32dT1/birthchartstore2-010-1.png"
+    alt="natal moon report"
+  />
+</a>
+<a
+  href="https://i.ibb.co/Z6xq067/bc-aplus-min.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://i.ibb.co/Z6xq067/bc-aplus-min.png"
+    alt="natal moon report"
+  />
+</a>
+<a
+  href="https://i.ibb.co/7tJV40m/birthchartstore2-010-2.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://i.ibb.co/7tJV40m/birthchartstore2-010-2.png"
+    alt="natal moon report"
+  />
+</a>
+
+<a
+  href="https://i.ibb.co/2kXfLDK/birthchartstore2-010-3.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://i.ibb.co/2kXfLDK/birthchartstore2-010-3.png"
+    alt="natal moon report"
+  />
+</a>
+
+<a
+  href="https://i.ibb.co/tpYYVss/todays-astrology-min.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://i.ibb.co/tpYYVss/todays-astrology-min.png"
+    alt="natal moon report"
+  />
+</a>
+<a
+  href="https://i.ibb.co/rfyfhK9/birthchartstore2-010-1-1.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://i.ibb.co/rfyfhK9/birthchartstore2-010-1-1.png"
+    alt="natal moon report"
+  />
+</a>
+<a
+  href="https://i.ibb.co/VwD4X3y/weeklyhoro-aplus-min.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://i.ibb.co/VwD4X3y/weeklyhoro-aplus-min.png"
+    alt="natal moon report"
+  />
+</a>
+<a
+  href="https://i.ibb.co/fDQ5FFp/birthchartstore2-010-3-1.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://i.ibb.co/fDQ5FFp/birthchartstore2-010-3-1.png"
+    alt="natal moon report"
+  />
+</a>
+<a
+  href="https://i.ibb.co/BgpCWZ8/astrologycalendar-aplus-min.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://i.ibb.co/BgpCWZ8/astrologycalendar-aplus-min.png"
+    alt="natal moon report"
+  />
+</a>
+<a
+  href="https://i.ibb.co/pJ3jXq4/birthchartstore2-010-1-2.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://i.ibb.co/pJ3jXq4/birthchartstore2-010-1-2.png"
+    alt="natal moon report"
+  />
+</a>
+<a
+  href="https://i.ibb.co/Z6xq067/bc-aplus-min.png"
+  data-fancybox="gallery"
+>
+  <img
+    class="fancybox-image"
+    src="https://i.ibb.co/Z6xq067/bc-aplus-min.png"
+    alt="natal moon report"
+  />
+</a>
+</div>
+`);
+
+var $carousel = $(".carousel_kh");
+$carousel.slick({
+  lazyLoad: "ondemand",
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  prevArrow: `<span class="prev_arrow slider_arrows"
+    ><svg class="flickity-button-icon" viewBox="0 0 100 100">
+      <path
+        d="M95.04 46 21.68 46 48.18 22.8 42.91 16.78 4.96 50 42.91 83.22 48.18 77.2 21.68 54 95.04 54 95.04 46z"
+        class="arrow"
+      ></path></svg>
+  </span>`,
+  nextArrow: `<span class="next_arrow slider_arrows"><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M95.04 46 21.68 46 48.18 22.8 42.91 16.78 4.96 50 42.91 83.22 48.18 77.2 21.68 54 95.04 54 95.04 46z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></span>`,
+});
+
+// carousel thumbnail click
+$(".carousel-thumb img").on("click", function () {
+  var index = +$(this).data("index");
+  $carousel.slick("slickGoTo", index, false);
+
+  $(this).parent().siblings().removeClass("active");
+  $(this).parent().addClass("active");
+});
+
+$("[data-fancybox]").fancybox({
+  animationEffect: "tube",
+});
+
+$(".optimize_carousel_cell img").on("click", function () {
+  var imgSrc = $(this).attr("src");
+  $(`.optimize_carousel_popup a[href="${imgSrc}"]`).click();
+});
+
 $(".optimize_join").on("click", function () {
   var scrollTo = $("form.variations_form.cart").offset().top - 20;
   $("html, body").animate(
@@ -14,279 +605,3 @@ $(".optimize_join").on("click", function () {
     700
   );
 });
-
-
-
-
-(function () {
-  setTimeout(() => {
-    var styles = `
-  @keyframes lds-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-             @keyframes shake {
-    10%,
-    90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-  
-    20%,
-    80% {
-      transform: translate3d(2px, 0, 0);
-    }
-  
-    30%,
-    50%,
-    70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-  
-    40%,
-    60% {
-      transform: translate3d(4px, 0, 0);
-    }
-  
-  }`
-    $("head").append(`<style>${styles}</style>`);
-
-    // make variables for every element in the form
-    var astrology_h1 = $("h1.product_title");
-    var astrology_text = $(".woocommerce-product-details__short-description");
-    var form_container = $("form.variations_form");
-    var main_h2 = $("form.variations_form > h2");
-    var email_h2 = $("#wcpa-header-1574120465608 h2");
-    var pilling_period = $("form.variations_form table.variations");
-    var gender = $("#wcpa-select-1572984697918");
-    var first_name = $("#wcpa-text-1572984648546");
-    var date_of_birth = $("#wcpa-date-1573667101075");
-    var time_of_birth = $("#wcpa-time-1573667109676");
-    var location_of_birth = $("#wcpa-placeselector-1572984785878");
-    var email = $("#wcpa-text-1572984832828");
-    var submit_button = $(".single_add_to_cart_button");
-    var email_input = $("#email");
-    var pilling_input = $("#billing-period");
-    var date_of_birth_input = $("#date-of-birth");
-    var time_of_birth_input = $("#time-of-birth");
-    var location_of_birth_input = $("#birth-location");
-    var first_name_input = $("#first-name");
-    var gender_input = $("select[name='gender']");
-    var bill_price = $(".woocommerce-variation");
-
-    function initialState() {
-      main_h2.text("Enter Your Contact Information");
-      email_h2.hide();
-      pilling_period.hide();
-      first_name.hide();
-      gender.hide();
-      date_of_birth.hide();
-      time_of_birth.hide();
-      location_of_birth.hide();
-      submit_button.hide();
-
-      // add step_1 button to email
-      form_container.append(
-        '<button type="button" class="next_form_btn step_1">Next</button>'
-      );
-      // add step_2 button to pilling
-      form_container.append(
-        '<button type="button" class="next_form_btn step_2">Add to Cart</button>'
-      );
-      // add step_3 button to pilling
-      form_container.append(
-        '<button type="button" class="next_form_btn step_3">Next</button>'
-      );
-      //add step 4
-      gender.append(
-        '<button type="button" class="next_form_btn step_4">Next</button>'
-      );
-      // add validation message to email
-      email.append(
-        '<div class="validation_message email_validation">please enter email</div>'
-      );
-
-      // add pilling validation message
-      pilling_period.append(
-        '<div class="validation_message billing_validation">please enter billing period</div>'
-      );
-
-      // add birthday validation message
-      location_of_birth.append(
-        '<div class="validation_message birth_validation">please enter all fields</div>'
-      );
-      // add birthday validation message
-      first_name.append(
-        '<div class="validation_message name_validation">please enter all fields</div>'
-      );
-      // put loading
-      main_h2.after(
-        `<div class="lds-ring"><div></div><div></div><div></div><div></div></div><p class="text_transfer_message">just a few seconds before you will be transferred</p>`
-      );
-    }
-
-    function isEmail(email) {
-      var regex =
-        /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-      return regex.test(email);
-    }
-
-    // first step
-    function firstStep() {
-      // hide title
-      astrology_h1.hide(300);
-      $(".woocommerce-product-gallery").addClass("opt_hide_mobil");
-      $(".optimize_product_info").addClass("opt_hide_mobil");
-      $(".woocommerce-product-details__short-description").addClass("opt_hide_mobil");
-      $(".product_title.entry-title").addClass("opt_hide_mobil");
-
-      // hide the astrology text
-      astrology_text.slideUp(200, function () {
-        var offsetTop = form_container.offset().top - 30
-        $("html, body").animate({ scrollTop: offsetTop }, 200);
-        setTimeout(() => {
-          animateSlideForm();
-        }, 600);
-        setTimeout(() => {
-          main_h2.text("Choose Your Plan");
-          email.hide();
-          pilling_period.show();
-          $("button.step_1").hide();
-          $(".step_2").show();
-        }, 850);
-      });
-    }
-
-    // second step
-    function secondStep() {
-      animateSlideForm();
-      setTimeout(() => {
-        bill_price.hide();
-        main_h2.text("Enter Your Birth Details");
-        pilling_period.hide();
-        $(".billing_validation").hide();
-        date_of_birth.show();
-        time_of_birth.show();
-        location_of_birth.show();
-        $("button.step_2").hide();
-        $(".step_3").show();
-      }, 280);
-    }
-
-    // third step
-    function thirdStep() {
-      animateSlideForm();
-      setTimeout(() => {
-        date_of_birth.hide();
-        time_of_birth.hide();
-        location_of_birth.hide();
-
-        main_h2.text("Enter Your Information");
-        $(".birth_validation").hide();
-        first_name.show();
-        gender.show();
-        $("button.step_3").hide();
-        $("button.step_4").show();
-      }, 280);
-    }
-
-    // animate the form
-    function animateSlideForm() {
-      form_container.animate({ left: "-1000px", top: "0px" }, 500, function () {
-        $(this).animate({ top: "1000px", left: "-1000px" }, 1, function () {
-          $(this).animate({ left: "1000px", top: "1000px" }, 0, function () {
-            $(this).animate({ left: "1000px", top: "0px" }, 1, function () {
-              $(this).animate({ left: "0px", top: "0px" }, 500);
-            });
-          });
-        });
-      });
-    }
-
-    // show validation message
-    function showValidationMessage(element) {
-      if (element.css("display") == "none") {
-        element.show();
-      } else {
-        element.addClass("shake");
-        setTimeout(() => {
-          element.removeClass("shake");
-        }, 300);
-      }
-    }
-
-    // initial step steps of making form
-    initialState();
-
-    // firstStep();
-    $(".step_1").on("click", function () {
-      var email_validation = $(".email_validation");
-      if (isEmail(email_input.val())) {
-        firstStep();
-      } else {
-        showValidationMessage(email_validation);
-      }
-    });
-
-    // secondStep
-    $(".step_2").on("click", function () {
-      var billing_validation = $(".billing_validation");
-      if (pilling_input.val()) {
-        secondStep();
-      } else {
-        showValidationMessage(billing_validation);
-      }
-    });
-
-    $(".step_3").on("click", function () {
-      var birth_validation = $(".birth_validation");
-      if (
-        date_of_birth_input.val() &&
-        time_of_birth_input.val() &&
-        location_of_birth_input.val()
-      ) {
-        thirdStep();
-      } else {
-        showValidationMessage(birth_validation);
-      }
-    });
-
-    $(".step_4").on("click", function () {
-      var name_validation = $(".name_validation");
-      if (first_name_input.val() && gender_input.val()) {
-        submit_button.click();
-        $(".lds-ring").show();
-        $(".text_transfer_message").fadeIn(400);
-        main_h2.hide();
-        first_name.hide();
-        gender.hide();
-        bill_price.hide();
-      } else {
-        showValidationMessage(name_validation);
-      }
-    });
-
-    // on change select value of pilling
-    pilling_input.on("change", function (e) {
-      var valueSelected = this.value;
-      var billing_validation = $(".billing_validation");
-      if (valueSelected) {
-        billing_validation.hide();
-      } else {
-        if (billing_validation.css("display") === "none") {
-          billing_validation.show();
-        } else {
-          billing_validation.addClass("shake");
-          setTimeout(() => {
-            billing_validation.removeClass("shake");
-          }, 300);
-        }
-      }
-    });
-  }, 3000)
-
-})();
-
