@@ -1,12 +1,32 @@
-$("body.product-details-beef-jerky-flowers-pint").append(`
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+$("body").append(`
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>`);
 
 $("head").append(`
-
-<link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick.js">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+  integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  />
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
@@ -238,6 +258,19 @@ section.related {
   .before_last{
     margin-left: 0;
   }
+}
+.optimize_what_mobile .opt_img_product img {
+  margin: auto;
+}
+.optimize_what_mobile .opt_info_product h4.title {
+  text-align: center;
+}
+.optimize_what_mobile .opt_info_product p.desc {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.optimize_what_mobile .slider_arrows{
+  top: 37% !important;
 }
 </style>
 `);
@@ -563,39 +596,6 @@ $(".optimize_product_info").after(`
 </div>
 `);
 
-var $carousel = $(".carousel_kh");
-$carousel.slick({
-  lazyLoad: "ondemand",
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  prevArrow: `<span class="prev_arrow slider_arrows"
-    ><svg class="flickity-button-icon" viewBox="0 0 100 100">
-      <path
-        d="M95.04 46 21.68 46 48.18 22.8 42.91 16.78 4.96 50 42.91 83.22 48.18 77.2 21.68 54 95.04 54 95.04 46z"
-        class="arrow"
-      ></path></svg>
-  </span>`,
-  nextArrow: `<span class="next_arrow slider_arrows"><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M95.04 46 21.68 46 48.18 22.8 42.91 16.78 4.96 50 42.91 83.22 48.18 77.2 21.68 54 95.04 54 95.04 46z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></span>`,
-});
-
-// carousel thumbnail click
-$(".carousel-thumb img").on("click", function () {
-  var index = +$(this).data("index");
-  $carousel.slick("slickGoTo", index, false);
-
-  $(this).parent().siblings().removeClass("active");
-  $(this).parent().addClass("active");
-});
-
-$("[data-fancybox]").fancybox({
-  animationEffect: "tube",
-});
-
-$(".optimize_carousel_cell img").on("click", function () {
-  var imgSrc = $(this).attr("src");
-  $(`.optimize_carousel_popup a[href="${imgSrc}"]`).click();
-});
-
 $(".optimize_join").on("click", function () {
   var scrollTo = $("form.variations_form.cart").offset().top - 20;
   $("html, body").animate(
@@ -605,3 +605,40 @@ $(".optimize_join").on("click", function () {
     700
   );
 });
+
+setTimeout(() => {
+  var $carousel = $(".carousel_kh");
+  $carousel.slick({
+    lazyLoad: "ondemand",
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: `<span class="prev_arrow slider_arrows"
+      ><svg class="flickity-button-icon" viewBox="0 0 100 100">
+        <path
+          d="M95.04 46 21.68 46 48.18 22.8 42.91 16.78 4.96 50 42.91 83.22 48.18 77.2 21.68 54 95.04 54 95.04 46z"
+          class="arrow"
+        ></path></svg>
+    </span>`,
+    nextArrow: `<span class="next_arrow slider_arrows"><svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M95.04 46 21.68 46 48.18 22.8 42.91 16.78 4.96 50 42.91 83.22 48.18 77.2 21.68 54 95.04 54 95.04 46z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></span>`,
+  });
+
+  // carousel thumbnail click
+  $(".carousel-thumb img").on("click", function () {
+    var index = +$(this).data("index");
+    $carousel.slick("slickGoTo", index, false);
+
+    $(this).parent().siblings().removeClass("active");
+    $(this).parent().addClass("active");
+  });
+
+  $("[data-fancybox]").fancybox({
+    animationEffect: "tube",
+  });
+
+  $(".optimize_carousel_cell img").on("click", function () {
+    var imgSrc = $(this).attr("src");
+    $(`.optimize_carousel_popup a[href="${imgSrc}"]`).click();
+  });
+
+
+}, 1000)
