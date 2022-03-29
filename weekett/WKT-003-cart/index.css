@@ -1,0 +1,20 @@
+@media (max-width: 828px) {
+  .opt_weekett {
+    position: initial;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .opt_weekett_item {
+    width: 100%;
+  }
+  .opt_small .opt_weekett_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .opt_weekett .opt_weekett_item:first-of-type,
+  .opt_weekett .opt_weekett_item:nth-of-type(2) {
+    margin-bottom: 0;
+  }
+}
