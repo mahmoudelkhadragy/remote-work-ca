@@ -1,0 +1,38 @@
+.opt_horoscope_info {
+  text-align: center;
+  margin: 40px 0;
+}
+.opt_horoscope_info h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  line-height: 35px;
+}
+.opt_horoscope_info p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 30px;
+}
+.opt_link {
+  background-color: #4d48af;
+  padding: 8px 38px 7px;
+  border-radius: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  margin-top: 10px;
+}
+.opt_link:hover {
+  color: #4d48af;
+  background-color: #fff;
+}
+.opt_horoscope_info {
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 600px) {
+  .opt_horoscope_info {
+    width: 98%;
+    margin: auto;
+  }
+}
