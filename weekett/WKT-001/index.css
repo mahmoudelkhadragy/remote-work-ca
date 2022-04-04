@@ -1,51 +1,38 @@
-#slickSlide10
-  > div.slideshow__text-wrap.slideshow__text-wrap--desktop
+#shopify-section-1574686523101 > div > div.section-header.text-left,
+#shopify-section-1574686523101 > div > div.about_text.text-left,
+#shopify-section-1574686523101
   > div
-  > div
-  > ul
-  > li
-  > h2 {
-  font-family: "SofiaProLight" !important;
-  margin-bottom: 35px;
+  > div.grid.grid--uniform.grid--flush-bottom.about_section_wrap {
+  display: none;
 }
-.opt_wkt_wrraper {
-  width: 80%;
+
+.opt_smart_kettle h2 {
+  font-size: 49px;
+  margin-bottom: 20px;
+  line-height: 51px;
 }
-.opt_wkt_link {
-  font-size: 18px;
-  text-align: center;
-  display: inline-block;
-  background-color: #fecf0a;
-  color: #003050;
-  padding: 10px 0;
-  border-radius: 40px;
-  transition: all 0.2s ease-in-out;
+.opt_smart_kettle_info {
+  padding: 10px;
 }
-.opt_wkt_p {
-  margin-bottom: 35px;
+.opt_smart_kettle_info h3 {
+  font-size: 22px;
 }
-.opt_wkt_link:hover {
-  color: #fff !important;
-  background-color: #436076;
-}
-@media (max-width: 991.98px) {
-  .opt_wkt_p {
-    margin-bottom: 20px;
+
+@media (max-width: 960px) {
+  .opt_smart_kettle h2 {
+    font-size: 36px;
+    line-height: 36px;
   }
-  #slickSlide10
-    > div.slideshow__text-wrap.slideshow__text-wrap--desktop
-    > div
-    > div
-    > ul
-    > li
-    > h2 {
-    margin-bottom: 20px;
+  .opt_smart_kettle_info p {
+    line-height: 19px !important;
   }
-  .opt_wkt_link {
+  .opt_smart_kettle_info h3 {
+    font-size: 19px;
   }
-}
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .opt_wkt_p {
-    line-height: 23px;
+  .opt_smart_kettle_info h3.pl-4 {
+    padding-left: 5px !important;
+  }
+  .opt_smart_kettle_info h3.pl-4.opt_before {
+    padding-left: 12px !important;
   }
 }
