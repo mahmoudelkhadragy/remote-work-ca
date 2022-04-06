@@ -149,3 +149,88 @@ $(`#shopify-section-1574686523101 > div`).append(`
 `)
 
 
+$('head').append(`
+<style>
+#shopify-section-1575271960032 > div{
+ padding: 60px 0 20px;
+}
+#FeatureRowImage-1575271960032{
+  max-width: 100% !important;
+}
+#shopify-section-1575271960032 > div > div > div > div.feature-row__item.feature-row__text.feature-row__text--left.padding-left > h2{
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.opt_first_col {
+  max-width: fit-content !important;
+}
+.opt_control_device_info_brand {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+@media (min-width: 750px) and (max-width: 1250px) {
+  #shopify-section-1575271960032
+    > div
+    > div
+    > div
+    > div.feature-row__item.feature-row__text.feature-row__text--left.padding-left
+    > h2 {
+    font-size: 33px;
+    line-height: 35px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 750px) {
+  #shopify-section-1575271960032 > div > div > div > div.feature-row__item.feature-row__text.feature-row__text--left.padding-left > div.rte.rte-setting.featured-row__subtext{
+    font-size: 16px !important;
+    line-height: 18px !important;
+  }
+  #FeatureRowImageWrapper-1575271960032{
+    padding-top: 30px;
+  }
+  #shopify-section-1575271960032 > div > div > div {
+    flex-direction: column-reverse;
+  }
+  #shopify-section-1575271960032
+    > div
+    > div
+    > div
+    > div.feature-row__item.feature-row__text.feature-row__text--left.padding-left {
+    text-align: left !important;
+  }
+  .opt_control_device_info_brand {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+</style>
+`);
+
+$('#shopify-section-1575271960032 > div > div > div > div.feature-row__item.feature-row__text.feature-row__text--left.padding-left').append(`
+<div class="opt_control_device_info">
+<div class="row">
+  <div class="col opt_first_col">
+    <p>Compatible with</p>
+  </div>
+  <div class="col">
+    <div class="opt_control_device_info_brand">
+      <div>
+        <img
+          src="https://i.ibb.co/brc2Lq0/amazon-home.png"
+          alt="amazon_home_img"
+        />
+        <span>Amazon Alexa and</span>
+      </div>
+      <div>
+        <img
+          src="https://i.ibb.co/55cJp3z/google-home.png"
+          alt="amazon_home_img"
+        />
+        <span>Google Home</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+`);
