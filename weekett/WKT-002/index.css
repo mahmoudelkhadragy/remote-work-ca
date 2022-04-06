@@ -1,0 +1,104 @@
+#AddToCart-product-template {
+  margin-bottom: 16px;
+}
+#ProductSection-product-template
+  > div
+  > div:nth-child(3)
+  > div
+  > div.product_policies_list {
+  display: none;
+}
+.opt_wkt_control_content {
+  gap: 15px;
+}
+.opt_wkt_control .opt_cont_img {
+  width: 90px;
+}
+.opt_wkt_control .opt_cont_img:last-of-type {
+  width: 140px;
+}
+@media (max-width: 750px) {
+  .opt_wkt_control_content {
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+#ProductSection-product-template > div > div:nth-child(2) > div > h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#ProductSection-product-template
+  > div
+  > div:nth-child(2)
+  > div
+  > div.yotpo.bottomLine.yotpo-small
+  > div
+  > div.standalone-bottomline
+  > div.yotpo-clr {
+  display: none;
+}
+#ProductSection-product-template
+  > div
+  > div:nth-child(2)
+  > div
+  > div.yotpo.bottomLine.yotpo-small
+  > div
+  > div.standalone-bottomline {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#ProductSection-product-template
+  > div
+  > div:nth-child(2)
+  > div
+  > div.product__price
+  > dl {
+  justify-content: center;
+}
+
+/* opt_wkt_safety */
+
+#FeatureRowImageWrapper-product-specification {
+  background-image: url(https://i.ibb.co/N9MCN3H/kettle1min.png);
+}
+#shopify-section-product-specification .feature-row {
+  display: none;
+}
+.opt_wkt_safety {
+  padding-bottom: 85px;
+}
+.opt_safety_info {
+  margin: 10px 0;
+  padding: 10px;
+}
+.opt_safety_info_img {
+  margin-right: 10px;
+}
+.opt_wkt_safety .opt_safety_info_img {
+  min-width: 36px;
+}
+.opt_wkt_safety_info h2 {
+  font-size: 53px;
+  line-height: 65px;
+}
+@media (max-width: 750px) {
+  .opt_wkt_safety > div.row {
+    flex-direction: column-reverse;
+  }
+  .opt_wkt_safety {
+    padding-top: 30px;
+  }
+  .opt_wkt_safety_info h2 {
+    padding-top: 20px;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+  }
+  .opt_wkt_safety_info p {
+    font-size: 16px !important;
+    line-height: 21px !important;
+  }
+}
