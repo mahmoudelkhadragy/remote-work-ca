@@ -231,6 +231,85 @@ convert.$(document).ready(function () {
     right: calc(50% - 58px);
   }
 }
+/* con_steps ----------------------------------------*/
+.con_steps {
+  position: relative;
+  padding: 40px 0;
+  margin: 40px 0;
+}
+.con_steps .con_container {
+  background-color: #44c7f3;
+  padding: 30px 0;
+}
+.con_steps h2 {
+  text-transform: initial;
+  color: #fff;
+}
+.con_steps h2 span {
+  color: #343b41;
+}
+.con_row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.con_steps .con_steps_item {
+  width: 50%;
+}
+.con_steps .con_steps_item p {
+  color: #fff;
+  font-size: 17px;
+}
+.con_steps_shop_link {
+  background-color: #fff !important;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding: 8px 20px 6px;
+  margin: 10px 0;
+  transition: all 0.2s ease-in-out;
+}
+.con_steps_shop_link:hover {
+  background-color: #343b41;
+  color: #fff;
+}
+.con_steps .con_steps_img_lg {
+  position: absolute;
+  width: 49%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: flex-end;
+}
+.con_steps .con_steps_img_lg img {
+  width: 100%;
+  max-width: 680px;
+}
+.con_steps .con_steps_img_sm {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .con_steps .con_steps_img_sm {
+    display: block;
+    margin-top: -90px;
+  }
+  .con_steps .con_steps_img_sm img {
+    width: 100%;
+  }
+  .con_steps .con_steps_img_lg {
+    display: none;
+  }
+  .con_steps .con_steps_item {
+    width: 100%;
+  }
+  .con_steps .con_container {
+    background-color: transparent;
+    padding: 0;
+  }
+  .con_steps {
+    background-color: #44c7f3;
+  }
+}
 </style>
 `)
 
@@ -330,7 +409,7 @@ convert.$(document).ready(function () {
       </div>
     </div>
     <p class="con_reinvented_p">
-      <span>Learn more</span> about how we reinvented your experience.
+      <a href="https://rtaoutdoorliving.com/our-technology-approach/">Learn more</a> about how we reinvented your experience.
     </p>
   </div>
 </section>
@@ -411,6 +490,214 @@ convert.$(document).ready(function () {
   <a class="con_start_design" href="https://design.rtaoutdoorliving.com/layout">Start designing</a>
 </div>
 </section>
-`)
-
+<!-- .con_steps --------------------------------------------------------  -->
+<section class="con_steps">
+<div class="con_steps_img_sm">
+  <img
+    src="https://i.ibb.co/T88WXQc/rta-step-lg.png"
+    alt="shop kitchen"
+  />
+</div>
+<div class="con_container">
+  <div class="con_row">
+    <div class="con_steps_item">
+      <h2>
+        Skip a few steps with<br />
+        <span>quick ship kitchens</span>
+      </h2>
+      <p>
+        You can skip the entire design and personalization process if you
+        want to receive your outdoor kitchen sooner.
+      </p>
+      <p>
+        Our most popular designs are delivered to your door in as little
+        as 2 weeks. A fast and simple way to buff your backyard.
+      </p>
+      <a
+        class="con_steps_shop_link"
+        href="https://rtaoutdoorliving.com/product-category/complete-outdoor-bbq-grill-islands/"
+        >Shop Quick Ship Kitchens</a
+      >
+    </div>
+  </div>
+</div>
+<div class="con_steps_img_lg">
+  <img
+    src="https://i.ibb.co/T88WXQc/rta-step-lg.png"
+    alt="shop kitchen"
+  />
+</div>
+</section>
+`);
 });
+
+convert.$(document).ready(function () {
+  convert.$('head').append(`
+    <style>
+
+    .con_learning_hub{
+      padding: 40px 0;
+      text-align: center;
+    }
+    .con_learning_hub h2{
+      text-transform: initial;
+    }
+    .con_learning_hub h2 span{
+      color: #44c7f3;
+    }
+    .con_learning_hub .con_container > p{
+      margin-bottom: 20px;
+    }
+    .con_learning_hub .con_row{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      max-width: 1000px;
+      margin: auto;
+      width: 90%;
+    }
+    .con_learning_hub .con_learning_item{
+      width: 32%;
+      position: relative;
+    }
+    .con_learning_hub .con_learning_item.first,
+    .con_learning_hub .con_learning_item.second{
+      width: 49%;
+    }
+    .con_learning_item .con_learning_info{
+      position: absolute;
+      bottom: 0;
+      padding: 10px 15px;
+      background-color: rgba(255, 255, 255, .85);
+      width: 100%;
+    }
+    .con_learning_hub .con_learning_item img{
+      width: 100%;
+    }
+    .con_learning_item .con_learning_info p{
+      font-weight: 400;
+      font-size: 17px;
+      color: #343b41;
+      margin-bottom: 5px;
+    }
+    .con_learning_item .con_learning_info a{
+      display: block;
+      margin: 5px auto;
+      width: fit-content;
+      font-weight: normal;
+      text-decoration: underline;
+      color: #343b41 !important;
+      transition: all .2s ease-in-out;
+    }
+    .con_learning_item .con_learning_info a:hover{
+      color: #44c7f3 !important;
+    }
+    .con_learning_link{
+      background-color: #343b41;
+      color: #fff !important;
+      padding: 8px 20px 6px;
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      display: block;
+      width: fit-content;
+      margin: 30px auto 10px;
+    }
+    @media (max-width: 767px) {
+      .con_learning_item .con_row{
+        flex-direction: column;
+      }
+      .con_learning_hub .con_learning_item{
+        width: 100%;
+      }
+      .con_learning_hub .con_learning_item.first,
+      .con_learning_hub .con_learning_item.second{
+        width: 100%;
+      }
+      .con_learning_item .con_learning_info p{
+        font-size: 15px;
+      }
+      .con_learning_item .con_learning_info a{
+        font-size: 17px;
+      }
+    }
+    </style> 
+  `);
+
+  convert.$(`#content > div > section.elementor-section.elementor-top-section.elementor-element.elementor-element-5288bfb3.elementor-section-full_width.elementor-section-height-default.elementor-section-height-default`).after(`
+  <section class="con_learning_hub">
+  <div class="con_container">
+    <h2><span>Learning</span> Hub</h2>
+    <p>Hosting hacks, outdoor kitchen knowledge, and more!</p>
+    <div class="con_row">
+      <div class="con_learning_item first">
+        <div class="con_img">
+          <img
+            src="https://i.ibb.co/qxkW9Z6/learn1.png"
+            alt="outdoor kitchen"
+          />
+        </div>
+        <div class="con_learning_info">
+          <p>Outdoor Kitchen Cost – 5 Helpful Considerations For You</p>
+          <a href="https://rtaoutdoorliving.com/pricing-costs/">Read now</a>
+        </div>
+      </div>
+      <div class="con_learning_item second">
+        <div class="con_img">
+          <img
+            src="https://i.ibb.co/LgH65Wr/learn2.png"
+            alt="outdoor kitchen"
+          />
+        </div>
+        <div class="con_learning_info">
+          <p>21 Outdoor Kitchen Ideas – Best Designs for Inspiration</p>
+          <a href="https://rtaoutdoorliving.com/outdoor-kitchen-ideas-for-design-inspiration/">Read now</a>
+        </div>
+      </div>
+
+      <div class="con_learning_item">
+        <div class="con_img">
+          <img
+            src="https://i.ibb.co/9chpPhX/learn3.png"
+            alt="outdoor kitchen"
+          />
+        </div>
+        <div class="con_learning_info">
+          <p>Outdoor Kitchen Countertops Options – 7 Considerations</p>
+          <a href="https://rtaoutdoorliving.com/outdoor-kitchen-countertops-options/">Read now</a>
+        </div>
+      </div>
+
+      <div class="con_learning_item">
+        <div class="con_img">
+          <img
+            src="https://i.ibb.co/VL7nkny/learn4.png"
+            alt="outdoor kitchen"
+          />
+        </div>
+        <div class="con_learning_info">
+          <p>Outdoor Kitchen Materials: What are the Best Options?</p>
+          <a href="https://rtaoutdoorliving.com/best-outdoor-kitchen-materials/">Read now</a>
+        </div>
+      </div>
+      <div class="con_learning_item">
+        <div class="con_img">
+          <img
+            src="https://i.ibb.co/pJsmsNh/learn5.png"
+            alt="outdoor kitchen"
+          />
+        </div>
+        <div class="con_learning_info">
+          <p>Building an Outdoor Kitchen – 10 Things to Know First</p>
+          <a href="https://rtaoutdoorliving.com/building-outdoor-kitchen-what-to-know/">Read now</a>
+        </div>
+      </div>
+    </div>
+    <a
+      class="con_learning_link"
+      href="https://rtaoutdoorliving.com/learning-hub/"
+      >Visit Our Learning Center</a>
+  </div>
+</section>
+  `)
+})
