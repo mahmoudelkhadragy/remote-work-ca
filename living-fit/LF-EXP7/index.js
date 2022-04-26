@@ -6,28 +6,28 @@ setTimeout(() => {
 
   const id = form.getAttribute('id');
   let styles = `
-<style>
-#${id}{
-  background: transparent !important;
-}
-#page-theme h1{
-  font-size: 35px;
-}
-.opt_join a.join_button{
-  color: #fff !important;
-  line-height: 22px;
-}
-a[href="https://www.activecampaign.com/lp/sem/pages?utm_source=direct&utm_campaign=acpages"]{
-  display: none !important;
-}
-#${id} ._submit{
-  background: #162535 !important;
-  font-family: "Montserrat", sans-serif !important;
-  font-size: 16px !important;
-  font-weight: 600 !important;
-}
-</style>
-`
+  <style>
+  #${id}{
+    background: transparent !important;
+  }
+  #page-theme h1{
+    font-size: 35px;
+  }
+  .opt_join a.join_button{
+    color: #fff !important;
+    line-height: 22px;
+  }
+  a[href="https://www.activecampaign.com/lp/sem/pages?utm_source=direct&utm_campaign=acpages"]{
+    display: none !important;
+  }
+  #${id} ._submit{
+    background: #162535 !important;
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+  }
+  </style>
+  `
 
   $('#fullname').attr('placeholder', 'Name');
   $('#email').attr('placeholder', 'Email');
@@ -41,7 +41,6 @@ a[href="https://www.activecampaign.com/lp/sem/pages?utm_source=direct&utm_campai
   document.querySelector('.opt_header').insertAdjacentHTML("beforebegin", styles);
 
   document.querySelectorAll('._submit').forEach(el => el.textContent = 'Get Free Workouts');
-  document.querySelector('body').insertAdjacentHTML("beforeend", styles);
 
   $('.opt_custom_submit').on('click', function () {
     let opt_name = $('.opt_input_name').val();
@@ -58,7 +57,6 @@ a[href="https://www.activecampaign.com/lp/sem/pages?utm_source=direct&utm_campai
     } else {
       $('.opt_cutom_form').append('<p class="opt_message mt-2 text-center">required valid email</p>');
     }
-
   });
 
   const validateEmail = (email) => {

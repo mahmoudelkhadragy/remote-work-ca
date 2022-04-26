@@ -1,10 +1,9 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+/* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
-<style>
- * {
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"> */
+* {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
@@ -354,4 +353,456 @@ header.opt_header .opt_row {
   .form_login {
     background-position: top;
   }
+}
+
+/* opt_plan */
+#page-theme .feature {
+  margin: 75px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#page-theme .feature-bg {
+  background: #466cce;
+  width: 94px;
+  height: 94px;
+  border-radius: 94px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page-theme .feature-card {
+  line-height: 26px;
+  font-size: 22px;
+  margin-bottom: 54px;
+}
+
+.opt_plan .main_h2 {
+  font-weight: 500;
+}
+.opt_plan .main_p {
+  font-weight: 400;
+}
+.opt_plan .plan_card h5 {
+  font-size: 20px;
+}
+.opt_plan .plan_img {
+  background-color: #466cce;
+  display: inline-block;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  width: 95px;
+  height: 95px;
+  line-height: 95px;
+}
+.opt_plan .last_p {
+  width: 60%;
+}
+
+@media (max-width: 767.98px) {
+  .opt_plan .last_p {
+    width: 95%;
+  }
+  .opt_plan .plan_card:first-of-type,
+  .opt_plan .plan_card:nth-of-type(2) {
+    margin-bottom: 30px;
+  }
+  #page-theme .feature-card {
+    line-height: 30px;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .opt_body_sections {
+    margin-top: 50px;
+  }
+}
+
+/* opt_back */
+.opt_back {
+  height: 560px;
+  background-image: url(https://i.ibb.co/Lgk3KJW/Rectangle-72-min.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+@media (max-width: 575.98px) {
+  .opt_back {
+    background-position: 86%;
+  }
+}
+
+/*  */
+.opt_try {
+  padding: 40px 0;
+  height: 100%;
+}
+.opt_try_img {
+  width: 70%;
+  margin: -180px auto 50px;
+  padding-top: 20px;
+}
+.opt_try_card {
+  background-color: #fae454;
+  width: 86%;
+  margin: auto;
+  padding: 20px 0 180px;
+}
+.opt_try .main_h2 {
+  font-size: 30px !important;
+  font-weight: 500 !important;
+  margin-top: 30px;
+  text-transform: inherit;
+}
+.opt_try .main_p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.opt_try .main_h2,
+.opt_try .main_p {
+  width: 50%;
+  margin: auto;
+}
+.opt_try .container > p {
+  width: 70%;
+  margin: auto;
+}
+@media (min-width: 767.99px) and (max-width: 998px) {
+  .opt_try .main_h2,
+  .opt_try .main_p {
+    width: 72%;
+    margin: auto;
+  }
+  .opt_try_card {
+    width: 100%;
+  }
+  .opt_try_img {
+    width: 85%;
+  }
+}
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+  .opt_try_img {
+    width: 95%;
+  }
+  .opt_try_card {
+    width: 100%;
+  }
+  .opt_try .main_h2,
+  .opt_try .main_p {
+    width: 70%;
+  }
+  .opt_try .container > p {
+    width: 98%;
+    margin: auto;
+  }
+  .opt_try .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .opt_try_img {
+    width: 95%;
+  }
+  .opt_try_card {
+    width: 100%;
+  }
+  .opt_try .main_h2 {
+    font-size: 23px !important;
+  }
+  .opt_try .main_h2,
+  .opt_try .main_p {
+    width: 80%;
+  }
+  .opt_try .container > p {
+    width: 96%;
+    margin: auto;
+  }
+  .opt_try .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+/* workouts */
+.workouts {
+  background-image: url(https://i.ibb.co/vVjcR2Z/sec4.png);
+  background-position: left;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+}
+.workouts .workouts_content {
+  background-color: #466cce;
+}
+@media (max-width: 767.98px) {
+  .workouts {
+    background-image: none;
+  }
+}
+
+/* opt_signup */
+.opt_signup {
+  padding: 40px 0;
+  background-color: #d85743;
+  color: #fff;
+}
+.form_container h2 {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.form_container p {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.form_container {
+  width: 80%;
+  margin: auto;
+}
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+  .form_container {
+    width: 70%;
+  }
+  .form_container h2 {
+    font-size: 31px;
+  }
+}
+@media (max-width: 575.98px) {
+  .form_container h2 {
+    font-size: 28px;
+  }
+  .form_container {
+    width: 90%;
+  }
+}
+
+/* opt ready */
+.opt_ready {
+  padding: 40px 0;
+}
+.opt_ready .main_h2 {
+  font-weight: 500;
+  font-size: 30px !important;
+}
+.opt_ready .main_p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.opt_ready_figure {
+  display: flex;
+  align-items: center;
+  background-image: url(https://i.ibb.co/7v7DJW1/man3back-min.png);
+  background-repeat: no-repeat;
+  height: 600px;
+  background-size: 64%;
+  background-position: left;
+  color: #fff;
+  justify-content: end;
+}
+.opt_ready_content {
+  background-color: #d85743;
+  width: 50%;
+  height: fit-content;
+  padding: 30px 10px;
+}
+.opt_ready_content_wrapper {
+  width: 80%;
+  margin: auto;
+}
+.opt_ready_content_wrapper p {
+  font-size: 17px;
+}
+.opt_ready_content_list {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+}
+.opt_ready_content_list li {
+  padding: 5px 0;
+  font-weight: 600;
+}
+.opt_ready_content_list li span.circle {
+  display: inline-block;
+  margin-right: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: #fae454;
+  border-radius: 50%;
+}
+.opt_ready_img {
+  display: none;
+}
+.opt_ready_content h2 {
+  font-size: 25px !important;
+}
+
+@media (max-width: 767.98px) {
+  .opt_ready {
+    padding: 0;
+  }
+  .opt_ready .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .opt_ready_figure {
+    height: 100%;
+    background-size: 100%;
+  }
+  .opt_ready_img {
+    display: block;
+  }
+  .opt_ready_figure {
+    flex-direction: column;
+  }
+  .opt_ready_figure {
+    background-image: none;
+  }
+  .opt_ready_content {
+    width: 100%;
+    margin-top: -2px;
+  }
+  .opt_ready_content_wrapper p {
+    font-size: 15px;
+  }
+  .opt_ready_content_wrapper li {
+    font-size: 14px;
+  }
+  .opt_ready_content .form_container {
+    width: 60%;
+    padding: 20px 0;
+  }
+  .opt_cutom_form input {
+    padding: 10px 12px;
+  }
+}
+@media (max-width: 575.98px) {
+  .opt_ready_figure {
+    height: 100%;
+    background-size: 100%;
+  }
+  .opt_ready .main_h2 {
+    font-size: 25px;
+  }
+  .opt_ready .main_p {
+    font-size: 16px;
+  }
+  .opt_ready_content {
+    width: 100%;
+    margin-top: -2px;
+  }
+  .opt_ready_content_wrapper {
+    width: 90%;
+  }
+  .opt_ready_content .form_container {
+    width: 80%;
+    padding: 20px 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+  .opt_ready_figure {
+    background-size: 80%;
+  }
+  .opt_ready_content {
+    width: 45%;
+  }
+  .opt_ready_content_wrapper {
+    width: 88%;
+  }
+  .opt_ready_content_wrapper p {
+    font-size: 15px;
+  }
+}
+.opt_kettlebell {
+  position: relative;
+}
+.opt_kettlebell_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(30%);
+}
+.opt_kettlebell_img img {
+  width: 100%;
+}
+.opt_kettlebell_mobi {
+  display: none;
+}
+@media (min-width: 856px) and (max-width: 1100px) {
+  .opt_kettlebell_info {
+    margin-top: 30%;
+  }
+  .opt_kettlebell p {
+    font-size: 14px !important;
+  }
+  .opt_kettlebell h2.main-h2 {
+    font-size: 21px !important;
+  }
+  .opt_kettlebell_wrapper {
+    transform: translateY(9%);
+  }
+}
+@media (max-width: 855px) {
+  .opt_kettlebell_mobi {
+    display: block;
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    clip-path: polygon(0 0, 100% 16%, 100% 100%, 0% 100%);
+  }
+  .opt_kettlebell_mobi .opt_kettlebell_info {
+    width: 95%;
+    margin: 40px auto 0;
+  }
+  .opt_kettlebell {
+    display: none;
+  }
+  .opt_kettlebell_mobi p {
+    font-size: 14px;
+  }
+  .opt_kettlebell_mobi h2.main-h2 {
+    font-size: 22px !important;
+  }
+}
+footer {
+  background-color: #162535;
+}
+footer img {
+  width: 55px;
+}
+a[href="https://www.activecampaign.com/lp/sem/pages?utm_source=direct&utm_campaign=acpages"]
+{
+  display: none;
+}
+
+.opt_cutom_form input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px 12px;
+  border: none;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+.opt_cutom_form button.opt_custom_submit {
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 15px 10px;
+  margin-top: 8px;
+  width: 100%;
+  color: #fff;
+  background: #162535;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.opt_cutom_form button.opt_custom_submit:hover {
+  background: #466cce;
+}
+#_form_6242111F103B9_ ._submit {
+  background: #fae454 !important;
 }
