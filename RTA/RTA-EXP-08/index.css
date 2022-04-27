@@ -1,0 +1,69 @@
+@import url("http://fonts.cdnfonts.com/css/proxima-nova-2?styles=44818,44820,44812");
+.con_finalize {
+  padding: 100px 0;
+  background-color: #fff;
+}
+.con_finalize h2 {
+  text-align: center;
+  color: #343b41;
+  font-family: "Proxima Nova", sans-serif;
+  text-transform: inherit;
+  font-size: 34px;
+  margin-bottom: 60px;
+}
+.con_finalize h2 span {
+  color: #44c7f3;
+}
+
+.con_finalize .elementor-container {
+  max-width: 1140px;
+  margin: auto;
+}
+.con_finalize .con_row {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.con_finalize .con_finalize_item {
+  width: 31%;
+}
+.con_finalize .con_finalize_item:last-of-type {
+  margin-bottom: 0px;
+}
+.con_finalize_item p {
+  min-width: 250px;
+  margin: auto;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  max-width: 270px;
+  margin: auto;
+}
+.con_finalize a {
+  background-color: #343b41;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 17px;
+  display: block;
+  width: fit-content;
+  padding: 10px 60px;
+  margin: 50px auto 0;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .con_finalize {
+    padding: 100px 0;
+  }
+  .con_finalize .con_row {
+    flex-direction: column;
+  }
+  .con_finalize .con_finalize_item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .con_finalize h2 {
+    font-size: 29px;
+    line-height: 39px;
+  }
+}
