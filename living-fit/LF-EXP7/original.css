@@ -474,6 +474,13 @@ form._form ._form_element ._form-label {
 .opt_email_below {
   background-color: #466cce;
 }
+
+.opt_email_below .message_confirm_content {
+  height: 180px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
 .opt_email_below_item_wrapper {
   width: 45%;
   max-width: 450px;
