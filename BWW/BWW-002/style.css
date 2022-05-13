@@ -1,0 +1,71 @@
+.table-contents {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
+  margin-top: 64px;
+  margin-bottom: 72px;
+}
+
+.table-contents > div {
+  margin-bottom: 30px;
+}
+
+.contents-card--blue {
+  background-color: #0064c8;
+}
+
+.contents-card--light-blue {
+  background-color: #2479c6;
+}
+
+.contents-card--green {
+  background-color: #1ca440;
+}
+
+.contents-card {
+  border-radius: 12px;
+  height: 100%;
+  padding: 24px 20px 51px 20px;
+  position: relative;
+  background-image: url("https://res.cloudinary.com/dv0yi7tc1/image/upload/v1651763153/bitcoin-icon-bg_m8eso6.png");
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.contents-card__label {
+  background: #ffc107;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  box-sizing: border-box;
+  width: 94px;
+  height: 20px;
+  display: block;
+  text-align: center;
+}
+
+.contents-card__link {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1;
+  color: #ffffff;
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+}
+
+.contents-card__link:hover {
+  color: #ffffff;
+}
+
+.contents-card__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffffff;
+}
