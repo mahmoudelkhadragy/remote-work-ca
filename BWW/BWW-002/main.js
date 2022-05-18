@@ -78,24 +78,30 @@
         </style>
       `)
 
-    let targetElement = convert.$('.table-responsive.country-compare-table.main-layout')[0];
-    if (con_href.includes(con_link1) || con_href.includes(con_link2)) {
-      convert.$('div.post-content.color-wrap > div.row.blue-row:nth-of-type(2)').after(`
+    let targetElement = convert.$('.row > div.col-xs-12 > h3.chapter-link').first().parents('.green-row.country-chapter');
+    if (con_href.includes(con_link1)) {
+      const targetEle = convert.$('.row > div.col-xs-12 > h3.chapter-link').first().parents('.grey-row.color-guide-text');
+      convert.$(targetEle).before(`
         <!-- start exp 002 -->
         <div class="optimize-main">
-          <div class="row table-contents" id="con_row_bww">
-  
-          </div>
+          <div class="row table-contents" id="con_row_bww"></div>
         </div>
         <!-- end exp 002 -->
       `);
-    } else {
-      convert.$(targetElement).after(`
+    } else if (con_href.includes(con_link2)) {
+      const targetEle = convert.$('.row > div.col-xs-12 > h3.chapter-link').first().parents('.darkblue-row');
+      convert.$(targetEle).before(`
         <!-- start exp 002 -->
         <div class="optimize-main">
-          <div class="row table-contents" id="con_row_bww">
-    
-          </div>
+          <div class="row table-contents" id="con_row_bww"></div>
+        </div>
+        <!-- end exp 002 -->
+     `);
+    } else {
+      convert.$(targetElement).before(`
+        <!-- start exp 002 -->
+        <div class="optimize-main">
+          <div class="row table-contents" id="con_row_bww"></div>
         </div>
         <!-- end exp 002 -->
       `);
@@ -108,6 +114,11 @@
         let h2_title = convert.$(this).siblings(`h2`).first().text();
         let new_section = '';
         let real_color_class = '';
+        // fix typo Chapter 6=5
+        if (h3_title === 'Chapter 6=5') {
+          h3_title = 'Chapter 5';
+          convert.$(this).text('Chapter 5');
+        }
         h2_title = h2_title.trim();
         con_counter = con_counter + 1;
         convert.$(this).parent().attr('id', `${h3_title}_${con_counter}`);
