@@ -1,0 +1,156 @@
+.opt_services {
+  background-color: #f5f4f4;
+  padding: 60px 0;
+}
+.opt_services .opt_services_container > h2 {
+  font-family: "Georgia";
+  font-size: 36px;
+}
+.opt_services .opt_services_container > p {
+  font-size: 23px;
+  font-family: "Segoe UI";
+  margin-bottom: 50px;
+}
+.opt_services .opt_services_wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 65px;
+}
+.opt_services .opt_services_card {
+  max-width: 435px;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+}
+.opt_services .opt_services-first {
+  background-image: url(https://i.ibb.co/pPYRGqD/opt-back1.png);
+}
+.opt_services .opt_services-second {
+  background-image: url(https://i.ibb.co/58TK4N1/opt-back2.png);
+  color: #fff;
+}
+.opt_services .opt_services_card h4 {
+  font-size: 30px;
+  font-family: "Georgia";
+}
+.opt_services .opt_services_card p.opt_sub_title {
+  font-family: "Segoe UI";
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+.opt_services .opt_services-prices p {
+  font-family: "Georgia";
+  font-size: 43px;
+}
+.opt_services-prices span {
+  font-family: "Segoe UI";
+  font-size: 16px;
+}
+.opt_services .opt_services-first .opt_services-prices span {
+  color: rgba(0, 0, 0, 0.6);
+}
+.opt_services .opt_services-first .opt_services-prices p {
+  color: #005298;
+}
+.opt_services .opt_divider {
+  width: 100%;
+  height: 1px;
+  background-color: #005298;
+  opacity: 0.2;
+  margin-bottom: 15px;
+}
+.opt_services .opt_services-second .opt_divider {
+  background-color: #fff;
+}
+.opt_services .opt_services-second .opt_services-prices span {
+  color: rgba(255, 255, 255, 0.7);
+}
+.opt_services .opt_services-prices-plus p {
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.opt_services .opt_services_card ul {
+  padding: 0 40px 15px 15px;
+}
+.opt_services .opt_services_card ul li {
+  display: flex;
+  padding: 8px 0;
+}
+.opt_services .opt_services_card ul li svg {
+  min-width: 20px;
+}
+.opt_services .opt_services_card ul li p {
+  margin-left: 10px;
+  font-family: "Segoe UI";
+  font-size: 18px;
+}
+.opt_services .opt_last_h2 {
+  font-family: "Georgia";
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 700px;
+  padding-top: 60px;
+  padding-bottom: 25px;
+  margin: auto;
+  line-height: 44px;
+}
+.opt_services button.opt_go_top {
+  background-color: #3cb878;
+  padding: 13px 70px;
+  margin: auto;
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 6px;
+}
+.opt_services button.opt_go_top:hover {
+  background-color: #39ab70;
+}
+.opt_services .opt_go_top .svg-inline--fa.fa-lg {
+  vertical-align: -0.325em;
+}
+.opt_services .opt_service_first-part {
+  min-height: 260px;
+  padding: 0 15px;
+}
+@media (max-width: 390px) {
+  .opt_services .opt_services_card {
+    background-size: 200% !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .opt_services .opt_services_wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .opt_services .opt_services_card {
+    background-size: 150%;
+  }
+  .opt_services .opt_services_wrapper {
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .opt_services .opt_services_wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .opt_services {
+    padding: 60px 10px;
+  }
+  .opt_services .opt_services_wrapper {
+    gap: 30px;
+  }
+  .opt_services .opt_services_card {
+    background-size: 150%;
+  }
+}
