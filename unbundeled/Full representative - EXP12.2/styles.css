@@ -134,6 +134,9 @@
   .opt_services .opt_services_wrapper {
     padding: 0 10px;
   }
+  .opt_services .opt_services_container > p {
+    padding: 0 10px;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
