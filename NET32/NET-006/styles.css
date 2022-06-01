@@ -1,0 +1,41 @@
+#squeeze-page section.squeeze-body-container {
+  background-color: transparent;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: none;
+}
+#create-account-page {
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+}
+.opt_text_purcahse {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 470px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+}
+.opt_text_purcahse > span {
+  display: inline-block;
+  margin: 10px 0;
+}
+.opt_text_purcahse ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.opt_small_circle {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+  margin-right: 5px;
+  transform: translateY(-2px);
+}
+.opt_text_purcahse ul li p {
+  margin: 0;
+  font-size: 18px;
+}
+.opt_text_purcahse ul li:nth-child(2) {
+  margin: 10px 0;
+}
