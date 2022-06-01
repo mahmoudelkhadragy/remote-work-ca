@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+.con_link_wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #ffc107;
+  padding: 10px 0;
+}
+.con_link_home {
+  font-size: 15px;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.con_link_home:hover,
+.con_link_home:focus {
+  color: #000;
+  text-decoration: underline;
+}
+@media (max-width: 550px) {
+  .con_link_home {
+    font-size: 13px;
+    padding: 0;
+  }
+  .con_link_wrapper {
+    padding: 8px 5px;
+  }
+}
