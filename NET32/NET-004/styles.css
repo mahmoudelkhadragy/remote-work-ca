@@ -1,0 +1,19 @@
+.opt_high_quality {
+  display: flex;
+  margin: 15px 0;
+}
+.opt_high_quality span {
+  color: #4385f6;
+  display: inline-block;
+  margin-right: 8px;
+}
+.opt_high_quality p {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+}
+@media (max-width: 550px) {
+  .opt_high_quality {
+    padding-right: 10px;
+  }
+}
