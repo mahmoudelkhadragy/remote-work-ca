@@ -1,19 +1,113 @@
 .opt_high_quality {
   display: flex;
+  align-items: center;
   margin: 15px 0;
+  grid-area: opt-quality;
 }
 .opt_high_quality span {
-  color: #4385f6;
-  display: inline-block;
-  margin-right: 8px;
+  margin-right: 15px;
 }
 .opt_high_quality p {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 14px;
+  margin: 0;
+  max-width: 470px;
+}
+.opt_high_quality p strong {
+  font-weight: 500;
+}
+#return-guarantee {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+#return-guarantee
+  .thirty-day-guarantee-text-container
+  .thirty-day-guarantee-title {
+  font-weight: 500;
+  font-size: 22px;
+}
+#return-guarantee .thirty-day-guarantee-subtitle {
+  color: #808080;
+  font-size: 14px;
 }
 @media (max-width: 550px) {
   .opt_high_quality {
     padding-right: 10px;
+  }
+  .opt_high_quality p {
+    padding-right: 10px;
+  }
+}
+@media (max-width: 767px) {
+  #product-key-features {
+    border-top: none;
+  }
+
+  #return-guarantee {
+    margin: 10px 15px 28px;
+  }
+
+  #return-guarantee .thirty-day-guarantee-subtitle {
+    display: inline;
+  }
+}
+#product-detail-page #core-product-detail-page {
+  grid-template-areas:
+    "media auto-order-status"
+    "media purchase-history"
+    "media title"
+    "media manufacturer"
+    "media review-summary"
+    "media mfr-promo"
+    "media pricebreak-summary"
+    "media delivery-estimate"
+    "media vendor-picker-dropdown"
+    "media add-to-cart-cta"
+    "media opt-quality"
+    "media experiment-ships-message"
+    "media sell-this-now"
+    "media ."
+    "key-features key-features"
+    "description-attributes description-attributes"
+    "return-guarantee return-guarantee"
+    "vendor-options vendor-options"
+    "shopping-list shopping-list"
+    "attributes attributes"
+    "product1_rr product1_rr"
+    "product2_rr product2_rr"
+    "q-and-a q-and-a"
+    "customer-reviews customer-reviews"
+    "productrv_rr productrv_rr";
+}
+@media (max-width: 767.98px) {
+  #product-detail-page #core-product-detail-page {
+    grid-template-areas:
+      ". auto-order-status ."
+      ". purchase-history ."
+      ". title ."
+      ". manufacturer ."
+      ". review-summary ."
+      ". media ."
+      ". mfr-promo ."
+      ". out-of-stock ."
+      ". pricebreak-summary ."
+      ". delivery-estimate ."
+      ". vendor-picker-dropdown ."
+      ". add-to-cart-cta ."
+      ". opt-quality ."
+      ". experiment-ships-message."
+      "return-guarantee return-guarantee return-guarantee"
+      ". key-features ."
+      ". description-attributes ."
+      ". vendor-options ."
+      ". attributes ."
+      "product3_rr product3_rr product3_rr"
+      "q-and-a q-and-a q-and-a"
+      "customer-reviews customer-reviews customer-reviews"
+      "product4_rr product4_rr product4_rr"
+      "product1_rr product1_rr product1_rr"
+      "product2_rr product2_rr product2_rr"
+      "productrv_rr productrv_rr productrv_rr";
   }
 }
