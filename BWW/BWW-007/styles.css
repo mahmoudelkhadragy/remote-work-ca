@@ -1,0 +1,60 @@
+@import url("http://fonts.cdnfonts.com/css/proxima-nova-2?styles=44818,44820,44812");
+.navbar {
+  margin: 0 !important;
+}
+.con_bww_banner {
+  background-color: #001737;
+  background-image: url(https://i.ibb.co/qY0G1CW/con-007back.png);
+  background-size: 110%;
+  background-repeat: no-repeat;
+  padding: 10px 0;
+  margin-bottom: 40px;
+}
+.con_banner_head {
+  display: flex;
+  justify-content: flex-end;
+}
+.con_bww_banner h2 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+  max-width: 200px;
+  font-family: "Proxima Nova", sans-serif;
+  margin: 0;
+}
+.con_bww_banner ul {
+  margin: 0;
+  padding: 20px 0;
+}
+.con_bww_banner ul li {
+  display: flex;
+  color: #fff;
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+.con_bww_banner ul li:last-of-type {
+  margin-bottom: 0;
+}
+.con_bww_banner ul li ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 8px;
+  height: 8px;
+  background-color: #ffc107;
+  border-radius: 20px;
+}
+.con_bww_banner ul li p {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+@media (max-width: 500px) {
+  .con_bww_banner {
+    background-image: url(https://i.ibb.co/D4qHYHV/con-007back-mob.png);
+  }
+}
