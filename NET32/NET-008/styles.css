@@ -1,0 +1,87 @@
+#top-banner-container {
+  background-color: rgba(67, 133, 246, 0.09);
+}
+.con_dental_products {
+  background-color: rgba(67, 133, 246, 0.09);
+  padding-bottom: 45px;
+}
+.con_dental_products section {
+  padding: 0 0 30px;
+  border-bottom: 2px solid #4385f6;
+}
+.con_dental_products h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Roboto";
+  color: #4385f6;
+  margin-bottom: 35px;
+  position: relative;
+}
+.con_dental_products h2::before,
+.con_dental_products h2::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 2px;
+  background-color: #4385f6;
+  top: 18px;
+}
+.con_dental_products h2::after {
+  left: 0;
+}
+.con_dental_products h2::before {
+  right: 0;
+}
+
+.con_products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.con_products .product-recommendation-container {
+  width: 20%;
+  border: none !important;
+}
+.con_products .product-recommendation {
+  border: none !important;
+}
+.con_dental_products .recommendation-image {
+  padding-bottom: 15px;
+}
+@media (max-width: 1199.98px) {
+  #homepage #top-banner-container {
+    margin-bottom: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  .con_products .product-recommendation-container {
+    width: 100%;
+  }
+  .con_dental_products h2 {
+    font-size: 25px;
+  }
+  .con_dental_products h2::before,
+  .con_dental_products h2::after {
+    display: none;
+  }
+  .con_dental_products section {
+    padding-top: 20px !important;
+    border-top: 2px solid #4385f6;
+    width: 94%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1150px) {
+  .con_products .product-recommendation-container {
+    width: 25%;
+  }
+  .con_dental_products h2 {
+    font-size: 27px;
+  }
+  .con_dental_products h2::before,
+  .con_dental_products h2::after {
+    width: 15%;
+  }
+  .con_dental_products section {
+    padding: 0 0 30px !important;
+  }
+}
