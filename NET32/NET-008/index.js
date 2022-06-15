@@ -102,22 +102,23 @@ setTimeout(() => {
     },
   ];
 
-  // const ele = document.getElementById('top-banner-container');
+  const ele = document.getElementById('top-banner-container');
 
-  // ele.insertAdjacentHTML("afterend", `
-  // <div class="con_dental_products">
-  //   <section>
-  //     <h2>Everyday essentials for your practice</h2>
-  //     <div class="con_products">
-  //     </div>
-  //   </section>
-  // </div>
-  // `);
+  ele.insertAdjacentHTML("afterend", `
+  <div class="con_dental_products">
+    <section>
+      <h2>Everyday essentials for your practice</h2>
+      <div class="con_products">
+      </div>
+    </section>
+  </div>
+  `);
 
   const productContainerEle = document.querySelector('.con_products');
 
   con_products.forEach((product) => {
-    let productPart = `<div class="product-recommendation-container">
+    let productPart = `
+    <div class="product-recommendation-container">
     <div class="product-recommendation">
       <a
         class="recommendation-image"
@@ -148,7 +149,8 @@ setTimeout(() => {
         ></a
       >
     </div>
-  </div>`
+  </div>
+  `
 
     if (productContainerEle) {
       productContainerEle.insertAdjacentHTML("beforeend", productPart)
