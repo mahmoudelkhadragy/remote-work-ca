@@ -1,0 +1,73 @@
+@import url("http://fonts.cdnfonts.com/css/proxima-nova-2?styles=44818,44820,44812");
+#content > div.elementor > section.elementor-section:nth-child(3) {
+  padding-top: 60px;
+}
+.con_container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.con_finalize {
+  display: none;
+}
+.con_install {
+  padding: 40px 0;
+  background-color: #fff;
+}
+.con_install h2 {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #343b41;
+  margin: 0;
+  padding-bottom: 50px;
+  text-align: center;
+  text-transform: inherit;
+}
+.con_install h2 span {
+  color: #44c7f3;
+}
+.con_video {
+  position: relative;
+  max-width: 792px;
+  margin: auto;
+  min-height: 420px;
+}
+.con_video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.con_refer {
+  width: fit-content;
+  padding: 10px;
+  margin: auto;
+  margin-top: 50px;
+  background-color: #e3f7fd;
+  border: 1px dashed #44c7f3;
+}
+.con_refer p {
+  margin: 0;
+  text-align: center;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+.con_refer p a {
+  color: #44c7f3;
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .con_install h2 {
+    font-size: 38px;
+  }
+  .con_refer p {
+    font-size: 16px;
+  }
+  .con_video {
+    min-height: 320px;
+  }
+}
