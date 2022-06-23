@@ -1,0 +1,598 @@
+@media screen and (min-width: 1008px) {
+  .catalog-filters {
+    width: 100%;
+    max-width: 100%;
+    background: #f5f4f0;
+    box-shadow: 0 4px 44px rgba(0, 0, 0, 0.25);
+    padding-bottom: 0;
+    padding-top: 10px;
+  }
+
+  .catalog-filters__title {
+    margin: 24px auto 0 auto;
+    text-align: center;
+    display: block;
+    z-index: 10;
+    position: relative;
+  }
+
+  .catalog-filters__subtitle {
+    margin: 32px auto 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .catalog-filters__title span {
+    width: 370px;
+    font-size: 30px;
+    font-family: "Muli", Times New roman, sans-serif;
+    background: #f5f4ef;
+    position: relative;
+    z-index: 10;
+    padding: 0 32px;
+    cursor: pointer;
+  }
+
+  .catalog-filters__title span:before {
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 4px;
+    transition: 0.3s all ease-in-out;
+
+    font: normal normal normal 24px/1 FontAwesome;
+    transform: rotate(180deg);
+  }
+
+  .catalog-filters__title:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    background: #e4e5e5;
+    transform: translateY(-50%);
+  }
+
+  .catalog-filters > .columns {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .catalog-filters.is-collapsed .catalog-filters__title span:before {
+    transform: rotate(0deg);
+  }
+
+  .catalog-filters.is-collapsed .columns.is-hidden-touch {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+
+  .catalog-filters .column .dropdown-trigger,
+  .process-steps,
+  #dropdown-gender {
+    display: none !important;
+  }
+
+  .catalog-filters .column .dropdown-menu {
+    display: block;
+    position: relative;
+  }
+
+  .catalog-filters .column {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2%;
+  }
+
+  .catalog-filters .column .dropdown {
+    display: block;
+    margin: 20px 0;
+    /* overflow: hidden; */
+  }
+
+  .catalog-filters .column .dropdown .dropdown-content {
+    padding: 0;
+    box-shadow: none;
+    background: none;
+  }
+
+  .catalog-filters .column .dropdown .dropdown-content .columns {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 5px;
+    justify-content: flex-start;
+  }
+
+  .catalog-filters .column .dropdown .dropdown-content .column {
+    width: auto;
+    position: relative;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+  }
+
+  .catalog-filters .column .dropdown .dropdown-content .column .dropdown-item {
+    text-indent: -1000vw;
+    justify-content: flex-start !important;
+    margin: 0;
+    position: relative;
+    font-size: 0;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown
+    .dropdown-content
+    .column
+    .dropdown-item:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: #000000 transparent transparent transparent;
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown
+    div:not(#dropdown-metal)
+    .dropdown-content
+    .column
+    .dropdown-item:hover:after {
+    top: -12px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown
+    div:not(#dropdown-metal)
+    .dropdown-content
+    .column
+    .dropdown-item:before {
+    content: attr(data-title);
+    position: absolute;
+    display: block;
+    background: black;
+    color: #ffffff;
+    left: 50%;
+    top: -30px;
+    white-space: nowrap;
+    padding: 3px 6px;
+    border-radius: 3px;
+    transform: translateX(-50%);
+    text-indent: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    font-size: 12px;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown
+    div:not(#dropdown-metal)
+    .dropdown-content
+    .column
+    .dropdown-item:hover:before {
+    opacity: 1;
+    visibility: visible;
+    top: -36px;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown
+    div:not(#dropdown-metal)
+    .dropdown-content
+    .column
+    .dropdown-item:hover {
+    background: none;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown
+    .dropdown-content
+    .column
+    .dropdown-item
+    img {
+    display: block;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    padding: 0 !important;
+    opacity: 1;
+    font-size: 0;
+  }
+
+  .catalog-filters .column .dropdown .dropdown-content a {
+    padding: 0;
+  }
+
+  .catalog-filters .column .dropdown .dropdown-menu {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    padding: 0;
+    min-width: fit-content !important;
+  }
+
+  .catalog-filters .column .dropdown-stone {
+    order: 2;
+    width: 40%;
+  }
+
+  .catalog-filters .column .filter-dropdown:before {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .catalog-filters .column .dropdown-stone:before {
+    content: "Filter By Gemstone";
+  }
+
+  .catalog-filters .column .dropdown-secondary-stone {
+    order: 5;
+    width: 40%;
+  }
+
+  .catalog-filters .column .dropdown-secondary-stone:before {
+    content: "Filter By Secondary Gemstone";
+  }
+
+  .catalog-filters .column .dropdown-price {
+    order: 4;
+    width: 21%;
+  }
+
+  .catalog-filters .column .dropdown-price:before {
+    content: "Filter By Price";
+  }
+
+  .catalog-filters .column .dropdown-carat {
+    order: 7;
+    width: 21%;
+  }
+
+  .catalog-filters .column .dropdown-carat:before {
+    content: "Filter By Carat";
+  }
+
+  .catalog-filters .column .dropdown-shape {
+    order: 3;
+    width: 35%;
+  }
+
+  .catalog-filters .column .dropdown-shape:before {
+    content: "Filter By Shape";
+  }
+
+  .catalog-filters .column .dropdown-style {
+    order: 6;
+    width: 35%;
+  }
+
+  .catalog-filters .column .dropdown-style:before {
+    content: "Filter By Style";
+  }
+
+  .catalog-filters .column .dropdown-shine_type {
+    display: none;
+  }
+
+  .catalog-filters .column .dropdown-shine_type:before {
+    content: "Filter By Shyne type";
+  }
+
+  .catalog-filters .filter {
+    display: none;
+  }
+
+  .catalog-filters .column .dropdown-metal {
+    order: 1;
+    width: 100%;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column
+    .dropdown-item {
+    text-indent: 0;
+    /* padding: 0 12px 0 0; */
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+    display: block !important;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column
+    .dropdown-item
+    img {
+    display: none;
+  }
+
+  /* Metal */
+  .catalog-filters .column .dropdown-metal:before {
+    content: "Filter By Metal";
+  }
+
+  .catalog-filters .column .dropdown-metal .dropdown-content .columns {
+    justify-content: space-between;
+    column-gap: 8px;
+  }
+
+  .catalog-filters .column .dropdown-metal .dropdown-content .column {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-14k-yellow-gold
+    .dropdown-item {
+    background: #e2ad40;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-14k-white-gold
+    .dropdown-item {
+    background: #aeaebe;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-18k-yellow-gold
+    .dropdown-item {
+    background: #e2ad40;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-18k-white-gold
+    .dropdown-item {
+    background: #aeaebe;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-platinum
+    .dropdown-item {
+    background: #ccccda;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-palladium
+    .dropdown-item {
+    background: #c1c1bb;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-14k-rose-gold
+    .dropdown-item {
+    background: #fdb2a3;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-18k-rose-gold
+    .dropdown-item {
+    background: #fdb2a3;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-14k-yellow-gold {
+    order: 3;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-14k-white-gold {
+    order: 1;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-18k-yellow-gold {
+    order: 4;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-18k-white-gold {
+    order: 2;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-platinum {
+    order: 7;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-palladium {
+    order: 8;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-14k-rose-gold {
+    order: 5;
+  }
+
+  .catalog-filters
+    .column
+    .dropdown-metal
+    .dropdown-content
+    .column.metal-18k-rose-gold {
+    order: 6;
+  }
+
+  .catalog-filters .column .dropdown-price .dropdown-content .column,
+  .catalog-filters .column .dropdown-carat .dropdown-content .column {
+    width: 100%;
+  }
+
+  .catalog-filters .range-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .catalog-filters .range-bubble {
+    color: #373a3c;
+    position: absolute;
+    border-radius: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 26px;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .catalog-filters .range-from,
+  .catalog-filters .range-to {
+    position: absolute;
+    left: 0;
+    top: -6px;
+    font-size: 14px;
+    color: #7b7b7b;
+    z-index: -1;
+  }
+
+  .catalog-filters .range-to {
+    right: 0;
+    left: auto;
+  }
+
+  .catalog-filters input[type="range"] {
+    width: 100%;
+  }
+
+  .catalog-filters input[type="range"] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+  }
+
+  .catalog-filters input[type="range"]:focus {
+    outline: none;
+  }
+
+  .catalog-filters input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #c8c8c8;
+  }
+
+  .catalog-filters input[type="range"]::-webkit-slider-thumb {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #373a3c;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3px;
+    padding: 4px;
+    background-size: 8px auto;
+  }
+
+  .catalog-filters input[type="range"]:focus::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    background: #c8c8c8;
+  }
+
+  .catalog-filters .range-progress {
+    width: 8px;
+    height: 3px;
+    background: #373a3c;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    pointer-events: none;
+    z-index: 11;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .catalog-filters .column .dropdown-metal .dropdown-content .columns {
+    column-gap: 12px;
+  }
+
+  .catalog-filters .column .dropdown .dropdown-content .columns {
+    column-gap: 8px;
+  }
+
+  .catalog-filters > .columns {
+    max-width: 1152px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
