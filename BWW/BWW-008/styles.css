@@ -2,6 +2,14 @@
 table.con_table tr:nth-child(2n) {
   background-color: #eff7ff;
 }
+.con_table_wrapper {
+  width: 100%;
+  overflow: auto;
+}
+.con_table {
+  min-width: 900px;
+}
+
 .con_table thead tr th {
   font-family: "Proxima Nova", sans-serif;
   font-size: 15px;
@@ -9,6 +17,7 @@ table.con_table tr:nth-child(2n) {
   color: #fff;
   background-color: #0064c8;
   text-align: center;
+  border: none !important;
 }
 .con_table thead tr th.cons_pros_th {
   width: 230px;
@@ -22,7 +31,6 @@ table.con_table tr:nth-child(2n) {
 .con_table tbody tr td.con_title a {
   display: flex;
   align-items: center;
-  justify-content: center;
   color: #000;
 }
 .con_table tbody tr td.con_title a:hover {
@@ -45,14 +53,38 @@ table.con_table tr:nth-child(2n) {
   text-align: center;
 }
 .con_table tbody tr td.con_data_td img {
+  width: 31px !important;
+}
+.con_table tbody tr td.con_data_td img.con_ease_icon {
+  width: 19px !important;
+}
+.con_table tbody tr td.con_data_td p {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding-top: 10px;
+}
+.con_red {
+  color: #de2c14;
+}
+.con_orang {
+  color: #fcac2e;
+}
+.con_green {
+  color: #1ca440;
+}
+
+.con_table tbody tr td.con_data_td img {
   width: 20px;
 }
 .con_table tbody tr td ul li {
   display: flex;
+  font-family: "Proxima Nova", sans-serif;
   font-size: 13px;
   font-weight: 400;
   margin-bottom: 5px;
   line-height: 18px;
+  color: #000;
 }
 .con_table tbody tr td ul li:last-of-type {
   margin-bottom: 0;
@@ -66,11 +98,24 @@ table.con_table tr:nth-child(2n) {
   color: #aaaaaa;
   font-size: 12px;
   font-family: "Proxima Nova", sans-serif;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.con_table tbody tr td {
+  border-right: 1px solid #cdcdcd;
+}
+.con_table tbody tr td:last-child {
+  border-right: none;
 }
 
 @media (max-width: 767px) {
   .con_table tbody tr td.con_title p {
     font-size: 14px;
+  }
+  .con_table tbody tr td ul.quick-info-pros,
+  .con_table tbody tr td ul.quick-info-cons {
+    margin-bottom: 0 !important;
   }
   .con_show_btn {
     display: block;
