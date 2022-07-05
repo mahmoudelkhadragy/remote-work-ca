@@ -1,0 +1,1 @@
+$('.main-table .list-item a').text('Visit Site');
