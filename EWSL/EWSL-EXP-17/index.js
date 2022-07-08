@@ -287,6 +287,10 @@ body{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
+  transition: all .2s ease-in-out;
+}
+.become_member_link:hover{
+  background: #363B53;
 }
 
 @media (max-width: 820px){
@@ -297,7 +301,8 @@ body{
     margin-right: 0px;
   }
   .con_become_member{
-    padding: 40px 20px;
+    padding: 40px 15px;
+    margin: 35px 10px;
   }
   .become_member-info{
     flex-direction: column;
@@ -309,14 +314,111 @@ body{
   }
 }
 
+/* con_login */
+.login_form{
+  background-color: #F6F7FE;
+  margin-bottom: 30px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 1px 4px rgb(54 59 83 / 10%);
+  border-radius: 15px;
+  gap: 30px;
+}
+.login_form input{
+  display: block;
+  width: 100%;
+  background-color: #EEF1FB;
+}
+.login_form_username label{
+  display: block;
+  color: #363B53;
+}
+.login_form_username,
+.login_form_password{
+  width: 40%;
+}
+.login_form_submit{
+  width: 20%;
+}
 
+
+
+
+/* con_login */
 
 /* footer */
 .con_footer{
   background-color: #363B53;
-  padding: 15px 10px;
+  padding: 20px 10px;
   color: #fff;
 }
+.con_footer_logo a{
+  color: #fff;
+  transition: all .2s ease-in-out;
+}
+.con_footer_logo a:hover{
+  text-decoration: underline;
+}
+.con_footer_logo p{
+  color: #fff;
+  opacity: .5;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.con_footer_wrappe{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.con_footer_links ul{
+  list-style: none;
+}
+.con_footer_links ul li{
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 13px;
+}
+.con_footer_links ul li:last-child{
+  margin-right: 0;
+}
+.con_footer_links ul li a{
+  color: #fff;
+  opacity: .7;
+  transition: all .2s ease-in-out;
+}
+.con_footer_links ul li a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media (max-width: 935){
+  .con_footer_wrappe{
+    flex-direction: column;
+    text-align: center;
+  }
+  .con_footer_logo{
+    padding-bottom: 15px;
+  }
+  .con_footer_links{
+    width: 100%;
+    border-top: 1px solid #6b7385;
+    padding-top: 15px;
+  }
+
+  .con_footer_links ul li{
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+  .con_footer_links ul li:last-child{
+    margin-bottom: 0px;
+  }
+}
+
+/* https://www.englishworksheetsland.com/most/application/default/views/public/img/eye-off.png
+https://www.englishworksheetsland.com/most/application/default/views/public/img/eye.png */
 </style>
 `);
 
@@ -405,26 +507,36 @@ document.querySelector('.wrapper').insertAdjacentHTML('afterend', `
       </div>
     </div>
   </section>
-  <!-- <section id="con_login">
-    <div class="container">
-      <div class="login_form">
-        <div class="login_form_username">
-          <label>Username/Email</label>
-          <input id="con_username" type="text" placeholder="Username/Email">
-        </div>
-        <div class="login_form_password">
-          <label>Password</label>
-          <input id="con_password" type="password" placeholder="Password">
-          <span class="eye_icon pass_off"></span>
-          <span class="eye_icon pass_on"></span>
-        </div>
-        <div class="login_form_submit">
-          <button type="button" id="login_btn">LOGIN</button>
-          <span id="forget_pass">Forgot your password?</span>
+
+  <section id="con_login">
+    <div class="con_container">
+      <div class="login_wrapper">
+        <h2>Login to your Account</h2>
+        <div class="login_form">
+          <div class="login_form_username">
+            <label>Username/Email</label>
+            <input id="con_username" type="text" placeholder="Username/Email">
+          </div>
+          <div class="login_form_password">
+            <label>Password</label>
+            <input id="con_password" type="password" placeholder="Password">
+            <span class="eye_icon pass_off"></span>
+            <span class="eye_icon pass_on"></span>
+          </div>
+          <div class="login_form_submit">
+            <button type="button" id="login_btn">LOGIN</button>
+            <span id="forget_pass">Forgot your password?</span>
+          </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
+  <section id="con_forget">
+    <div class="con_container">
+
+    </div>
+  </section>
+
   <footer class="con_footer">
     <div class="con_footer_wrappe con_wrapper">
       <div class="con_footer_logo">
