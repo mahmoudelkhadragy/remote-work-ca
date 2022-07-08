@@ -315,16 +315,19 @@ body{
 }
 
 /* con_login */
-.login_form{
+.login_wrapper{
   background-color: #F6F7FE;
   margin-bottom: 30px;
   padding: 30px;
-  display: flex;
-  justify-content: space-between;
   box-shadow: 0px 1px 4px rgb(54 59 83 / 10%);
   border-radius: 15px;
+}
+.login_form{
+  display: flex;
+  justify-content: space-between;
   gap: 30px;
 }
+
 .login_form input{
   display: block;
   width: 100%;
@@ -533,7 +536,19 @@ document.querySelector('.wrapper').insertAdjacentHTML('afterend', `
   </section>
   <section id="con_forget">
     <div class="con_container">
-
+      <div class="login_wrapper">
+        <h2>Lost Password?</h2>
+        <div class="login_form">
+          <div class="forget_form_email">
+            <label>Username/Email</label>
+            <input id="forget_pass_input" type="text" placeholder="Username/Email">
+          </div>
+          <div class="con_forget_submit">
+            <button id="forget_btn" class="forget_btn"></button>
+            <span id="con_login_show">log In</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -558,7 +573,6 @@ document.querySelector('.wrapper').insertAdjacentHTML('afterend', `
     </div>
   </footer>
 </div>
-
 `);
 
 let mobile_btn = document.querySelector(".btn_mobile");
