@@ -15,10 +15,14 @@ h2 {
 .con_container{
   max-width: 1140px;
   margin: auto;
+  padding: 0 12px;
 }
 /* general style */
 body{
-  background-color: #E5E5E5;
+  background-color: #EEF1FB;
+}
+.con_my_wrapper{
+  background-color: #EEF1FB;
 }
 .con_wrapper{
   max-width: 1200px;
@@ -176,6 +180,7 @@ body{
     transition: all .2s ease-in-out;
   }
 
+
 }
 @media (max-width: 485px){
   .head_center{
@@ -249,7 +254,7 @@ body{
   background: #F6F7FE;
   box-shadow: 0px 1px 4px rgba(54, 59, 83, 0.1);
   border-radius: 15px;
-  margin: 35px 15px;
+  margin: 35px 0px 10px;
   padding: 40px 70px;
 }
 .become_member-info{
@@ -322,21 +327,43 @@ body{
   box-shadow: 0px 1px 4px rgb(54 59 83 / 10%);
   border-radius: 15px;
 }
-.login_form{
+.login_form,
+.forgetpass_form{
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
-
-.login_form input{
+.login_wrapper h2{
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #363B53;
+  margin-bottom: 12px;
+}
+.login_form input,
+.forgetpass_form input{
   display: block;
   width: 100%;
   background-color: #EEF1FB;
+  border: none;
+  padding: 12px 14px;
+  background-color: #EEF1FB;
+  border-radius: 4px;
+  outline: none;
+  font-size: 15px;
 }
-.login_form_username label{
+
+.login_form_username label,
+.forgetpass_form label,
+.login_form_password label{
   display: block;
   color: #363B53;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
+
 .login_form_username,
 .login_form_password{
   width: 40%;
@@ -344,9 +371,124 @@ body{
 .login_form_submit{
   width: 20%;
 }
-
-
-
+input::placeholder{
+  color: #AEB3C4;
+}
+.custom_btn{
+  background-color: #363B53;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 9px 8px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  transition: all .2s ease-in-out;
+}
+.custom_btn:hover{
+  background-color: #F5912A;
+}
+.con_forget_submit,
+.login_form_submit{
+  text-align: center;
+  margin: auto;
+  width: 20%;
+  min-width: 150px;
+}
+.con_forget_submit span.con_last_link,
+.login_form_submit span.con_last_link{
+  display: block;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+}
+.con_hide{
+  display: block;
+  opacity: 0;
+  margin-bottom: 7px;
+}
+.forget_form_email{
+  width: 80%;
+}
+#con_forget{
+  display: none;
+}
+#con_login{
+  display: none;
+}
+#con_error_message{
+  color: #df3939;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 500;
+  display: none;
+}
+.login_form_password{
+  position: relative;
+}
+.forget_eye_icon{
+  position: absolute;
+  top: 34px;
+  right: 12px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+#forget_error_message{
+  display: none;
+  color: #df3939;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+#forget_confirm_message{
+  display: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+@media (max-width: 935px){
+  .login_form,
+  .forgetpass_form{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .login_form_username,
+  .login_form_password{
+    width: 100%;
+  }
+  .forget_form_email{
+    width: 100%;
+  }
+  .con_forget_submit,
+  .login_form_submit{
+    width: 40%;
+    min-width: 200px;
+  }
+  #con_login .login_wrapper,
+  #con_forget .login_wrapper{
+    padding: 25px 16px;
+  }
+  .con_hide{
+    display: none;
+  }
+  #forget_error_message,
+  #forget_confirm_message{
+    margin-top: 10px;
+  }
+}
+@media (max-width: 520px){
+  .con_forget_submit,
+  .login_form_submit{
+    width: 100%;
+    min-width: 100%;
+  }
+}
 
 /* con_login */
 
@@ -419,9 +561,6 @@ body{
     margin-bottom: 0px;
   }
 }
-
-/* https://www.englishworksheetsland.com/most/application/default/views/public/img/eye-off.png
-https://www.englishworksheetsland.com/most/application/default/views/public/img/eye.png */
 </style>
 `);
 
@@ -523,14 +662,15 @@ document.querySelector('.wrapper').insertAdjacentHTML('afterend', `
           <div class="login_form_password">
             <label>Password</label>
             <input id="con_password" type="password" placeholder="Password">
-            <span class="eye_icon pass_off"></span>
-            <span class="eye_icon pass_on"></span>
+            <img id="forget_eye_icon" class="forget_eye_icon" src="https://www.englishworksheetsland.com/most/application/default/views/public/img/eye.png" alt="eye on">
           </div>
           <div class="login_form_submit">
-            <button type="button" id="login_btn">LOGIN</button>
-            <span id="forget_pass">Forgot your password?</span>
+            <span class="con_hide">dd</span>
+            <button type="button" id="login_btn" class="custom_btn">LOGIN</button>
+            <span id="forget_pass" class="con_last_link">Forgot your password?</span>
           </div>
         </div>
+        <p id="con_error_message">The user name or password is incorrect</p>
       </div>
     </div>
   </section>
@@ -538,16 +678,19 @@ document.querySelector('.wrapper').insertAdjacentHTML('afterend', `
     <div class="con_container">
       <div class="login_wrapper">
         <h2>Lost Password?</h2>
-        <div class="login_form">
+        <div class="forgetpass_form">
           <div class="forget_form_email">
             <label>Username/Email</label>
             <input id="forget_pass_input" type="text" placeholder="Username/Email">
           </div>
           <div class="con_forget_submit">
-            <button id="forget_btn" class="forget_btn"></button>
-            <span id="con_login_show">log In</span>
+            <span class="con_hide">dd</span>
+            <button type="button" id="forget_btn" class="custom_btn">GET PASSWORD</button>
+            <span id="con_login_show" class="con_last_link">log In</span>
           </div>
         </div>
+        <p id="forget_error_message">Username/email is incorrect</p>
+        <p id="forget_confirm_message">A link to reset your password has been emailed to you. Please check your mailbox.</p>
       </div>
     </div>
   </section>
@@ -575,19 +718,114 @@ document.querySelector('.wrapper').insertAdjacentHTML('afterend', `
 </div>
 `);
 
-let mobile_btn = document.querySelector(".btn_mobile");
-mobile_btn.addEventListener("click", function () {
-	// debugger;
-	let head_right = document.querySelector(".head_right");
-	let head_center = document.querySelector(".head_center");
-	console.log(head_right.style.height);
-	if (head_right.style.height == '' || head_right.style.height == '0px') {
-		head_right.style.height = "inherit";
-		head_center.style.height = "inherit";
-		head_center.style.margin = "20px 0";
-	} else {
-		head_right.style.height = "0";
-		head_center.style.height = "0";
-		head_center.style.margin = "0";
-	}
+const current_url = window.location.href;
+const mobileBtn = document.querySelector(".btn_mobile");
+const loginUrls = ["https://www.englishworksheetsland.com/most/login", "https://www.englishworksheetsland.com/most/member"];
+const loginSection = document.getElementById("con_login");
+const forgetSection = document.getElementById("con_forget");
+const forgetIcon = document.getElementById("forget_eye_icon");
+const loginBtn = document.getElementById("login_btn")
+const conUsername = document.getElementById('con_username');
+const conPassword = document.getElementById("con_password");
+const conErrorMessage = document.getElementById("con_error_message");
+const forgetPass = document.getElementById("forget_pass");
+const forgetBtn = document.getElementById("forget_btn");
+const conLoginShow = document.getElementById("con_login_show");
+const conForgetErrorMessage = document.getElementById("forget_error_message");
+const conForgetConfirmMessage = document.getElementById("forget_confirm_message");
+const conForgetUsername = document.getElementById("forget_pass_input");
+let isShown = false;
+
+
+if (current_url.includes(loginUrls[0]) || current_url.includes(loginUrls[1])) {
+  loginSection.style.display = "block";
+  document.querySelector('.con_become_member').style.marginBottom = '0px';
+}
+
+// mobile bar icon
+mobileBtn.addEventListener("click", function () {
+  let head_right = document.querySelector(".head_right");
+  let head_center = document.querySelector(".head_center");
+  console.log(head_right.style.height);
+  if (head_right.style.height == '' || head_right.style.height == '0px') {
+    head_right.style.height = "inherit";
+    head_center.style.height = "inherit";
+    head_center.style.margin = "20px 0";
+  } else {
+    head_right.style.height = "0";
+    head_center.style.height = "0";
+    head_center.style.margin = "0";
+  }
+});
+// forget icon
+forgetIcon.addEventListener("click", function () {
+  if (isShown) {
+    conPassword.type = "password";
+    forgetIcon.src = "https://www.englishworksheetsland.com/most/application/default/views/public/img/eye.png"
+  } else {
+    conPassword.type = "text";
+    forgetIcon.src = "https://www.englishworksheetsland.com/most/application/default/views/public/img/eye-off.png"
+  }
+  isShown = !isShown;
+});
+
+//login button
+loginBtn.addEventListener("click", function () {
+  let username = document.getElementById("amember-login");
+  let password = document.getElementById("amember-pass");
+  let loginSubmit = document.querySelector(".am-row-buttons input[value='Login']");
+  let errorMessage = document.querySelector(".am-login-errors");
+
+  username.value = conUsername.value;
+  password.value = conPassword.value;
+
+  loginSubmit.click();
+
+  setTimeout(() => {
+    if (!errorMessage) {
+      conErrorMessage.style.display = "block";
+    }
+  }, 1200);
+
+});
+
+forgetPass.addEventListener("click", function () {
+  let switchBtn = document.querySelector('.am-form-login-switch[href="/most/login?sendpass"]');
+  forgetSection.style.display = "block";
+  loginSection.style.display = "none";
+  switchBtn.click();
+});
+conLoginShow.addEventListener("click", function () {
+  let switchBtn = document.querySelector('.am-form-login-switch[href="/most/login"]');
+  forgetSection.style.display = "none";
+  loginSection.style.display = "block";
+  switchBtn.click();
+});
+
+forgetBtn.addEventListener("click", function () {
+  const forgetUsername = document.getElementById("sendpass");
+  const forgetSubmit = document.querySelector(".am-row-buttons input[value='Get Password']");
+
+
+
+  forgetUsername.value = conForgetUsername.value;
+
+  console.log(forgetUsername.value);
+
+  forgetSubmit.click();
+
+  setTimeout(() => {
+    let errorMessage = document.querySelector(".am-sendpass-errors");
+    let confirmMessage = document.querySelector(".am-sendpass-form .am-info");
+    console.log(errorMessage);
+    console.log(confirmMessage);
+    if (errorMessage != null) {
+      console.log("error");
+      conForgetErrorMessage.style.display = "block";
+    }
+    if (confirmMessage != null) {
+      console.log("confirm");
+      conForgetConfirmMessage.style.display = "block";
+    }
+  }, 1200);
 });

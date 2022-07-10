@@ -12,10 +12,17 @@ h2 {
 .con_container{
   max-width: 1140px;
   margin: auto;
+  padding: 0 12px;
 }
 /* general style */
 body{
-  background-color: #E5E5E5;
+  background-color: #EEF1FB;
+}
+.wrapper{
+  display: none;
+}
+.con_my_wrapper{
+  background-color: #EEF1FB;
 }
 .con_wrapper{
   max-width: 1200px;
@@ -173,6 +180,7 @@ body{
     transition: all .2s ease-in-out;
   }
 
+
 }
 @media (max-width: 485px){
   .head_center{
@@ -246,7 +254,7 @@ body{
   background: #F6F7FE;
   box-shadow: 0px 1px 4px rgba(54, 59, 83, 0.1);
   border-radius: 15px;
-  margin: 35px 15px;
+  margin: 35px 0px 10px;
   padding: 40px 70px;
 }
 .become_member-info{
@@ -319,21 +327,43 @@ body{
   box-shadow: 0px 1px 4px rgb(54 59 83 / 10%);
   border-radius: 15px;
 }
-.login_form{
+.login_form,
+.forgetpass_form{
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
-
-.login_form input{
+.login_wrapper h2{
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #363B53;
+  margin-bottom: 12px;
+}
+.login_form input,
+.forgetpass_form input{
   display: block;
   width: 100%;
   background-color: #EEF1FB;
+  border: none;
+  padding: 12px 14px;
+  background-color: #EEF1FB;
+  border-radius: 4px;
+  outline: none;
+  font-size: 15px;
 }
-.login_form_username label{
+
+.login_form_username label,
+.forgetpass_form label,
+.login_form_password label{
   display: block;
   color: #363B53;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
+
 .login_form_username,
 .login_form_password{
   width: 40%;
@@ -341,9 +371,124 @@ body{
 .login_form_submit{
   width: 20%;
 }
-
-
-
+input::placeholder{
+  color: #AEB3C4;
+}
+.custom_btn{
+  background-color: #363B53;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 9px 8px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  transition: all .2s ease-in-out;
+}
+.custom_btn:hover{
+  background-color: #F5912A;
+}
+.con_forget_submit,
+.login_form_submit{
+  text-align: center;
+  margin: auto;
+  width: 20%;
+  min-width: 150px;
+}
+.con_forget_submit span.con_last_link,
+.login_form_submit span.con_last_link{
+  display: block;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+}
+.con_hide{
+  display: block;
+  opacity: 0;
+  margin-bottom: 7px;
+}
+.forget_form_email{
+  width: 80%;
+}
+#con_forget{
+  display: none;
+}
+#con_login{
+  display: none;
+}
+#con_error_message{
+  color: #df3939;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 500;
+  display: none;
+}
+.login_form_password{
+  position: relative;
+}
+.forget_eye_icon{
+  position: absolute;
+  top: 34px;
+  right: 12px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+#forget_error_message{
+  display: none;
+  color: #df3939;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+#forget_confirm_message{
+  display: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+@media (max-width: 935px){
+  .login_form,
+  .forgetpass_form{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .login_form_username,
+  .login_form_password{
+    width: 100%;
+  }
+  .forget_form_email{
+    width: 100%;
+  }
+  .con_forget_submit,
+  .login_form_submit{
+    width: 40%;
+    min-width: 200px;
+  }
+  #con_login .login_wrapper,
+  #con_forget .login_wrapper{
+    padding: 25px 16px;
+  }
+  .con_hide{
+    display: none;
+  }
+  #forget_error_message,
+  #forget_confirm_message{
+    margin-top: 10px;
+  }
+}
+@media (max-width: 520px){
+  .con_forget_submit,
+  .login_form_submit{
+    width: 100%;
+    min-width: 100%;
+  }
+}
 
 /* con_login */
 
@@ -416,6 +561,3 @@ body{
     margin-bottom: 0px;
   }
 }
-
-/* https://www.englishworksheetsland.com/most/application/default/views/public/img/eye-off.png
-https://www.englishworksheetsland.com/most/application/default/views/public/img/eye.png */

@@ -95,14 +95,15 @@
           <div class="login_form_password">
             <label>Password</label>
             <input id="con_password" type="password" placeholder="Password">
-            <span class="eye_icon pass_off"></span>
-            <span class="eye_icon pass_on"></span>
+            <img id="forget_eye_icon" class="forget_eye_icon" src="https://www.englishworksheetsland.com/most/application/default/views/public/img/eye.png" alt="eye on">
           </div>
           <div class="login_form_submit">
-            <button type="button" id="login_btn">LOGIN</button>
-            <span id="forget_pass">Forgot your password?</span>
+            <span class="con_hide">dd</span>
+            <button type="button" id="login_btn" class="custom_btn">LOGIN</button>
+            <span id="forget_pass" class="con_last_link">Forgot your password?</span>
           </div>
         </div>
+        <p id="con_error_message">The user name or password is incorrect</p>
       </div>
     </div>
   </section>
@@ -110,16 +111,19 @@
     <div class="con_container">
       <div class="login_wrapper">
         <h2>Lost Password?</h2>
-        <div class="login_form">
+        <div class="forgetpass_form">
           <div class="forget_form_email">
             <label>Username/Email</label>
             <input id="forget_pass_input" type="text" placeholder="Username/Email">
           </div>
           <div class="con_forget_submit">
-            <button id="forget_btn" class="forget_btn">GET PASSWORD</button>
-            <span id="con_login_show">log In</span>
+            <span class="con_hide">dd</span>
+            <button type="button" id="forget_btn" class="custom_btn">GET PASSWORD</button>
+            <span id="con_login_show" class="con_last_link">log In</span>
           </div>
         </div>
+        <p id="forget_error_message">Username/email is incorrect</p>
+        <p id="forget_confirm_message">A link to reset your password has been emailed to you. Please check your mailbox.</p>
       </div>
     </div>
   </section>
