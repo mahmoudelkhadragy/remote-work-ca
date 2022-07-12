@@ -754,6 +754,10 @@ if (current_url.includes(loginUrls[0]) || current_url.includes(loginUrls[1])) {
   document.querySelector('.con_become_member').style.marginBottom = '0px';
 }
 
+if (current_url.includes('https://www.englishworksheetsland.com/printme.html')) {
+  document.querySelector('.con_worksheet').classList.add('con_fix_height');
+}
+
 // mobile bar icon
 mobileBtn.addEventListener("click", function () {
   let head_right = document.querySelector(".head_right");
