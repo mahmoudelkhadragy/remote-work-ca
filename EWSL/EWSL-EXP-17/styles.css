@@ -351,6 +351,12 @@ body{
   border-radius: 4px;
   outline: none;
   font-size: 15px;
+  border: 1px solid transparent;
+  transition: all .2s ease-in-out;
+}
+.login_form input:focus,
+.forgetpass_form input:focus{
+  border: 1px solid #363B53;
 }
 
 .login_form_username label,
@@ -421,12 +427,14 @@ input::placeholder{
   display: none;
 }
 #con_error_message{
-  color: #df3939;
+  color: #F55B2A;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
-  text-align: center;
   font-weight: 500;
   display: none;
+}
+#con_error_message span{
+  margin-right: 6px;
 }
 .login_form_password{
   position: relative;
@@ -441,10 +449,12 @@ input::placeholder{
 }
 #forget_error_message{
   display: none;
-  color: #df3939;
+  color: #F55B2A;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
-  text-align: center;
+}
+#forget_error_message span{
+  margin-right: 6px;
 }
 #forget_confirm_message{
   display: none;

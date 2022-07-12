@@ -21,6 +21,9 @@ h2 {
 body{
   background-color: #EEF1FB;
 }
+.wrapper{
+  display: none;
+}
 .con_my_wrapper{
   background-color: #EEF1FB;
 }
@@ -351,6 +354,11 @@ body{
   border-radius: 4px;
   outline: none;
   font-size: 15px;
+  border: 1px solid transparent;
+}
+.login_form input:focus,
+.forgetpass_form input:focus{
+  border: 1px solid #363B53;
 }
 
 .login_form_username label,
@@ -421,12 +429,14 @@ input::placeholder{
   display: none;
 }
 #con_error_message{
-  color: #df3939;
+  color: #F55B2A;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
-  text-align: center;
   font-weight: 500;
   display: none;
+}
+#con_error_message span{
+  margin-right: 6px;
 }
 .login_form_password{
   position: relative;
@@ -441,10 +451,12 @@ input::placeholder{
 }
 #forget_error_message{
   display: none;
-  color: #df3939;
+  color: #F55B2A;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
-  text-align: center;
+}
+#forget_error_message span{
+  margin-right: 6px;
 }
 #forget_confirm_message{
   display: none;
@@ -670,7 +682,7 @@ document.querySelector('.wrapper').insertAdjacentHTML('afterend', `
             <span id="forget_pass" class="con_last_link">Forgot your password?</span>
           </div>
         </div>
-        <p id="con_error_message">The user name or password is incorrect</p>
+        <p id="con_error_message"><span><i class="fas fa-exclamation-circle"></i></span>The user name or password is incorrect</p>
       </div>
     </div>
   </section>
@@ -689,7 +701,7 @@ document.querySelector('.wrapper').insertAdjacentHTML('afterend', `
             <span id="con_login_show" class="con_last_link">log In</span>
           </div>
         </div>
-        <p id="forget_error_message">Username/email is incorrect</p>
+        <p id="forget_error_message"><span><i class="fas fa-exclamation-circle"></i></span>Username/email is incorrect</p>
         <p id="forget_confirm_message">A link to reset your password has been emailed to you. Please check your mailbox.</p>
       </div>
     </div>
@@ -776,6 +788,7 @@ loginBtn.addEventListener("click", function () {
   let loginSubmit = document.querySelector(".am-row-buttons input[value='Login']");
   let errorMessage = document.querySelector(".am-login-errors");
 
+
   username.value = conUsername.value;
   password.value = conPassword.value;
 
@@ -784,6 +797,13 @@ loginBtn.addEventListener("click", function () {
   setTimeout(() => {
     if (!errorMessage) {
       conErrorMessage.style.display = "block";
+    } else {
+      let logOutLink = document.querySelector('a[href="/most/logout"]');
+      if (logOutLink) {
+        document.querySelector(".con_my_wrapper").style.display = "none";
+        document.querySelector(".wrapper").style.display = "block";
+
+      }
     }
   }, 1200);
 
@@ -806,26 +826,22 @@ forgetBtn.addEventListener("click", function () {
   const forgetUsername = document.getElementById("sendpass");
   const forgetSubmit = document.querySelector(".am-row-buttons input[value='Get Password']");
 
-
-
   forgetUsername.value = conForgetUsername.value;
-
-  console.log(forgetUsername.value);
 
   forgetSubmit.click();
 
   setTimeout(() => {
     let errorMessage = document.querySelector(".am-sendpass-errors");
     let confirmMessage = document.querySelector(".am-sendpass-form .am-info");
-    console.log(errorMessage);
-    console.log(confirmMessage);
     if (errorMessage != null) {
-      console.log("error");
       conForgetErrorMessage.style.display = "block";
+    } else {
+      conForgetErrorMessage.style.display = "none";
     }
     if (confirmMessage != null) {
-      console.log("confirm");
       conForgetConfirmMessage.style.display = "block";
+    } else {
+      conForgetConfirmMessage.style.display = "none";
     }
   }, 1200);
 });
