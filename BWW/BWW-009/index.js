@@ -58,20 +58,24 @@ body{
 
 
 const allChapterLinks = convert.$('.country-chapter .chapter-link');
+let allLi = ``
+
+allChapterLinks.each(function(i){
+    let linkTitle = $(this).text();
+    $(this).attr('data-link', `link_${i}`);
+    let list = `
+    <li>
+      <a data-link="link_${i}">${linkTitle}</a>
+    </li>
+    `
+    allLi += list;
+});
 
 convert.$('.container').append(`
 <div class="con_sidebar">
   <p>Table of Contents</p>
   <ul id="con_ul">
-    <li>
-      <a href="">chapter1</a>
-    </li>
-    <li>
-      <a href="">chapter2</a>
-    </li>
-    <li>
-      <a href="">chapter3</a>
-    </li>
+    ${allLi}
   </ul>
 </div>
 `);
