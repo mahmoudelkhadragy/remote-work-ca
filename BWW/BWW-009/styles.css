@@ -14,6 +14,7 @@ body{
   font-family: "Proxima Nova", sans-serif;
   border-radius: 6px;
   transition: all .2s ease-in-out;
+  z-index: 888;
 }
 .con_sidebar > p{
   margin: 0;
@@ -79,9 +80,69 @@ body{
   background-color: #DDE5EC;
 }
 
-@media (min-width: 1250px) and (max-width: 1360px){
+.con_arrow_mobile{
+  display: none;
+  position: absolute;
+  top: 41px;
+  left: -36px;
+  background: linear-gradient(123.59deg, #2479C6 15.87%, #1257A4 74.55%), #2479C6;
+  box-shadow: 0px 1px 4px rgb(27 90 148 / 60%);
+  border-radius: 4px 0px 0px 4px;
+  color: #fff;
+  padding: 4px 8px 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.con_arrow_mobile span{
+  font-size: 14px;
+  margin-bottom: 3px;
+  display: inline-block;
+}
+.con_arrow_mobile > p{
+  writing-mode: vertical-lr;
+  text-orientation: inherit;
+  transform: rotateZ(180deg);
+  margin: 0 !important;
+  font-size: 13px;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+}
+.con_arrow_mobile i{
+  font-style: normal !important;
+  transition: all .2s ease-in-out;
+}
+.con_sidebar_overlay{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  z-index: 666;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 1200px) and (max-width: 1360px){
   .con_sidebar > p{
     font-size: 14px;
+  }
+  #con_wrapper p{
+    font-size: 13px;
+  }
+}
+@media (max-width: 1199.99px){
+  .con_arrow_mobile{
+    display: block;
+  }
+  .con_sidebar{
+    width: 250px;
+    right: -250px;
+    border-radius: 12px 0 0 0;
+    height: 100%;
+  }
+  .con_sidebar > p{
+    display: none;
   }
   #con_wrapper p{
     font-size: 13px;
