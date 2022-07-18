@@ -130,6 +130,20 @@
     display: none;
   }
 }
+@media (min-width: 780px) and (max-width: 1270px){
+  .con_mob_banner{
+    display: block;
+    background-image: url('https://conversionadvocates.com/exp-images/bww/bww-013/con_med_back.jpg');
+  }
+  .con_mob_banner p{
+    width: 290px;
+    margin-left: 120px;
+  }
+  #float_button{
+    bottom: 95px !important;
+  }
+}
+
 @media (max-width: 780px){
   .con_mob_banner{
     display: block;
