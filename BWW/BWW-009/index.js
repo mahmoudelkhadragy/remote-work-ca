@@ -9,7 +9,7 @@ body{
   z-index: 999;
 }
 .con_sidebar{
-  width: calc((calc(100% - 980px))/2);
+  width: calc((calc(100% - 1030px))/2);
   position: fixed;
   top: 140px;
   right: 8px;
@@ -17,7 +17,8 @@ body{
   font-family: "Proxima Nova", sans-serif;
   border-radius: 6px;
   transition: all .2s ease-in-out;
-  z-index: 888;
+  z-index: 9999;
+  box-shadow: 0 0 10px #cfcfcf;
 }
 .con_sidebar > p{
   margin: 0;
@@ -126,7 +127,7 @@ body{
   left: 0;
 }
 
-@media (min-width: 1200px) and (max-width: 1360px){
+@media (min-width: 1220px) and (max-width: 1360px){
   .con_sidebar > p{
     font-size: 14px;
   }
@@ -134,7 +135,7 @@ body{
     font-size: 13px;
   }
 }
-@media (max-width: 1199.99px){
+@media (max-width: 1219.99px){
   .con_arrow_mobile{
     display: block;
   }
@@ -143,12 +144,16 @@ body{
     right: -250px;
     border-radius: 12px 0 0 0;
     height: 100%;
+    box-shadow: none;
   }
   .con_sidebar > p{
     display: none;
   }
   #con_wrapper p{
     font-size: 13px;
+  }
+  #con_wrapper p:first-child{
+    border-radius: 12px 0 0 0;
   }
 }
 </style>
@@ -161,9 +166,14 @@ let allLi = ``
 
 allChapterLinks.each(function (i) {
   let linkTitle = $(this).text();
+  let linkTitleName = $(this).siblings('h2.chapter-name').text();
   let list = '';
   $(this).attr('data-link', `link_${i}`);
-  list = `<p data-link="link_${i}">${linkTitle}</p>`;
+  if (linkTitle == 'Chapter 6=5') {
+    linkTitle = 'Chapter 5';
+    $(this).text('Chapter 5');
+  }
+  list = `<p data-link="link_${i}">${linkTitleName || linkTitle}</p>`;
   allLi += list;
 });
 

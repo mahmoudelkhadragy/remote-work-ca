@@ -1,4 +1,5 @@
 @import url("http://fonts.cdnfonts.com/css/proxima-nova-2?styles=44818,44820,44812");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css");
 body{
   background: #E5E5E5 !important;
 }
@@ -6,7 +7,7 @@ body{
   z-index: 999;
 }
 .con_sidebar{
-  width: calc((calc(100% - 980px))/2);
+  width: calc((calc(100% - 1030px))/2);
   position: fixed;
   top: 140px;
   right: 8px;
@@ -14,7 +15,8 @@ body{
   font-family: "Proxima Nova", sans-serif;
   border-radius: 6px;
   transition: all .2s ease-in-out;
-  z-index: 888;
+  z-index: 9999;
+  box-shadow: 0 0 10px #cfcfcf;
 }
 .con_sidebar > p{
   margin: 0;
@@ -48,7 +50,6 @@ body{
 
 #con_wrapper p:hover,
 #con_wrapper p:focus{
-  padding: 9px 10px 7px 20px;
   background-color: #DDE5EC;
 }
 
@@ -123,7 +124,7 @@ body{
   left: 0;
 }
 
-@media (min-width: 1200px) and (max-width: 1360px){
+@media (min-width: 1220px) and (max-width: 1360px){
   .con_sidebar > p{
     font-size: 14px;
   }
@@ -131,7 +132,7 @@ body{
     font-size: 13px;
   }
 }
-@media (max-width: 1199.99px){
+@media (max-width: 1219.99px){
   .con_arrow_mobile{
     display: block;
   }
@@ -140,11 +141,18 @@ body{
     right: -250px;
     border-radius: 12px 0 0 0;
     height: 100%;
+    box-shadow: none;
   }
   .con_sidebar > p{
     display: none;
   }
   #con_wrapper p{
     font-size: 13px;
+  }
+  #con_wrapper p:first-child{
+    border-radius: 12px 0 0 0;
+  }
+  #con_wrapper{
+    max-height: 100%;
   }
 }
