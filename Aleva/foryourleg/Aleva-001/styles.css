@@ -1,0 +1,42 @@
+#shopify-section-header .announcement-bar{
+  display: none;
+}
+#content #shopify-section-sidebar{
+  display: none;
+}
+#content #main{
+  width: 100%;
+}
+#shopify-section-header .row .logo.img-logo .header-text{
+  display: none;
+}
+#shopify-section-header .row .free-call,
+#shopify-section-header .row #AccountsNav,
+#shopify-section-header .row .login-top,
+#shopify-section-header .row .search-form,
+#shopify-section-header .row .cart-info,
+#shopify-section-header .row nav.off-canvas-navigation,
+nav.top-menu .hide-mobile,
+#cartform .cart-actions > div:last-child{
+  display: none;
+}
+nav.top-menu{
+  padding: 7px 0;
+}
+
+#cartform .cart-actions .action-main h5{
+  padding-top: 12px;
+}
+
+@media (max-width: 767px){
+  #shopify-section-header .row .logo.img-logo{
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+  #cartform .cart-actions .action-main h5{
+    padding-top: 0px;
+  }
+  .action-main{
+    padding: 0;
+  }
+}
