@@ -1,0 +1,11 @@
+#shopify-section-sidebar{
+  display: none;
+}
+#content #main{
+  width: 100%;
+}
+@media (max-width: 767px){
+  #shopify-section-sidebar{
+    display: block;
+  }
+}
