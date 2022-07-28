@@ -49,6 +49,6 @@ setTimeout(() => {
   }
   setTimeout(() => {
     clearInterval(myInterval);
-  }, 6000);
+  }, 8000);
 
-}, 600);
+}, 100);
